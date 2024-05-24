@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydroelectric Dams</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: #ccc;
+  }
+
+  main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow containers to wrap onto the next line */
+  height: calc(100vh - 150px);
+}
+
+  
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 250px;
+  }
+  .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .info {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+  }
+
+  .glow-on-hover {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px #d9d9d9;
+    transition: all 0.3s ease;
+    color: #fff;
+    background-image: linear-gradient(to right, #24c6dc, #514a9d);
+    text-decoration: none;
+  }
+
+  .glow-on-hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #24c6dc;
+  }
+
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  Hydroelectric Dams
+</header>
+<nav>
+  <ul>
+    <li><a href="home.html">Home </a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="renewable_energy.html">Renewable Energy Integration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <div id="container">
+    <!-- JavaScript will dynamically add content here -->
+  </div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2024 Hydroelectric Power Plants. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Hydroelectric dam data
+  const dams = [
+    { name: "Tehri Dam", capacity: 2400, cuf: 0.4 },
+    { name: "Sardar Sarovar Dam", capacity: 1450, cuf: 0.4 },
+    { name: "Nagarjuna Sagar Dam", capacity: 1450, cuf: 0.4 },
+    { name: "Koyna Hydroelectric Project", capacity: 1960, cuf: 0.4 },
+    { name: "Nathpa Jhakri Dam", capacity: 1500, cuf: 0.4 },
+    { name: "Bhakra Nangal Dam", capacity: 1325, cuf: 0.4 },
+    { name: "Indira Sagar Dam", capacity: 1000, cuf: 0.4 },
+    { name: "Srisailam Dam", capacity: 1670, cuf: 0.4 },
+    { name: "Sharavathi Hydroelectric Project", capacity: 1035, cuf: 0.4 },
+    { name: "Koldam Hydroelectric Power Station", capacity: 800, cuf: 0.4 }
+  ];
+
+  // Function to calculate hourly production
+  function calculateHourlyProduction(capacity, cuf) {
+    return Math.round(capacity * 24 * cuf / 24); // Divide by 24 for hourly production
+  }
+
+  // Function to create dam containers
+  function createDamContainers() {
+    const container = document.getElementById("container");
+    dams.forEach(dam => {
+      const hourlyProduction = calculateHourlyProduction(dam.capacity, dam.cuf);
+      const html = `
+        <div class="container">
+          <div class="value">${hourlyProduction} MWh</div>
+          <div class="info">${dam.name}</div>
+          <a href="#" class="glow-on-hover">Click Me</a>
+        </div>
+      `;
+      container.innerHTML += html;
+    });
+  }
+
+  // Call function to create dam containers
+  createDamContainers();
+</script>
+
+</body>
+</html>

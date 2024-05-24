@@ -1,0 +1,1457 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" itemscope itemtype="http://schema.org/LocalBusiness" ng-app="waqi">
+<head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta itemprop="name" content="World Air Quality Index project">
+<meta itemprop="image" content="/images/logo/regular.png">
+<meta name="author" content="The World Air Quality Index project" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>AIR QUALITY</title>
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="apple-touch-icon"  sizes="114x114"  href="/images/iOS/ico_114.png"/>
+<link rel="apple-touch-icon"  sizes="72x72"  href="/images/iOS/ico_72.png"/>
+<link rel="apple-touch-icon"  href="/images/iOS/ico_57.png"/>
+<link href='https://aqicn.org/here/' rel=canonical/>
+<link rel='alternate' hreflang='x-default' href='https://aqicn.org/here/'/>
+<link rel='alternate' hreflang='zh-CN' href='https://aqicn.org/here/cn/'/>
+<link rel='alternate' hreflang='ja' href='https://aqicn.org/here/jp/'/>
+<link rel='alternate' hreflang='es' href='https://aqicn.org/here/es/'/>
+<link rel='alternate' hreflang='ko' href='https://aqicn.org/here/kr/'/>
+<link rel='alternate' hreflang='ru' href='https://aqicn.org/here/ru/'/>
+<link rel='alternate' hreflang='zh-TW' href='https://aqicn.org/here/hk/'/>
+<link rel='alternate' hreflang='fr' href='https://aqicn.org/here/fr/'/>
+<link rel='alternate' hreflang='pl' href='https://aqicn.org/here/pl/'/>
+<link rel='alternate' hreflang='de' href='https://aqicn.org/here/de/'/>
+<link rel='alternate' hreflang='pt' href='https://aqicn.org/here/pt/'/>
+<link rel='alternate' hreflang='vi' href='https://aqicn.org/here/vn/'/>
+<link rel='alternate' hreflang='it' href='https://aqicn.org/here/it/'/>
+<link rel='alternate' hreflang='id' href='https://aqicn.org/here/id/'/>
+<link rel='alternate' hreflang='nl' href='https://aqicn.org/here/nl/'/>
+<link rel='alternate' hreflang='fa' href='https://aqicn.org/here/fa/'/>
+<link rel='alternate' hreflang='th' href='https://aqicn.org/here/th/'/>
+<link rel='alternate' hreflang='hu' href='https://aqicn.org/here/hu/'/>
+<link rel='alternate' hreflang='el' href='https://aqicn.org/here/el/'/>
+<link rel='alternate' hreflang='ro' href='https://aqicn.org/here/ro/'/>
+<link rel='alternate' hreflang='bg' href='https://aqicn.org/here/bg/'/>
+<link rel='alternate' hreflang='ur' href='https://aqicn.org/here/ur/'/>
+<link rel='alternate' hreflang='hi' href='https://aqicn.org/here/hi/'/>
+<link rel='alternate' hreflang='ar' href='https://aqicn.org/here/ar/'/>
+<link rel='alternate' hreflang='sr' href='https://aqicn.org/here/sr/'/>
+<link rel='alternate' hreflang='bn' href='https://aqicn.org/here/bn/'/>
+<link rel='alternate' hreflang='hu' href='https://aqicn.org/here/hu/'/>
+<link rel='alternate' hreflang='bs' href='https://aqicn.org/here/bs/'/>
+<link rel='alternate' hreflang='hr' href='https://aqicn.org/here/hr/'/>
+<meta itemprop="description" name="Description" content="Real-time air pollution index for 100+ countries" http-equiv="Description" />
+<meta name="Keywords" http-equiv="Keywords" content=" PM2.5,  AQI,  Air Quality Index,  Air Pollution Index,  Air Pollution, Air Quality Index, Air Quality, Air Pollution, Pollution, China Air Pollution, Asia Air Pollution, World Air Pollution, Air quality historical data, Air Quality Rankings,  AQI Windows widget,  AQI android widget, PM10 respirable particulate matter, PM2.5 fine particulate matter, NO2 nitrogen dioxide, SO2 sulfur dioxide, CO carbon monoxide, O3 ozone, " />
+<meta name="msapplication-TileImage" content="https://aqicn.org/images/iOS/ico_114.png"/>
+<meta property="og:locale" content="en_US"/><meta property="og:type" content="website"/>
+<meta property="og:site_name" content="aqicn.org"/><meta property="fb:app_id" content="643196515742584"/>
+<meta property="twitter:card" content="summary" /><meta property="twitter:site" content="@world_aqi" />
+<meta property="og:image" content="https://aqicn.org/images/aqicn.fbworldmap-201911.png"/>
+<meta property="og:description" content="How polluted is the air today? Check out the real-time air pollution map, for more than 100 countries.">
+<meta property="og:title" content="Real-time air pollution index for 100+ countries" />
+<meta property="og:url" content="https://aqicn.org/here/" />
+
+
+<style type="text/css">
+
+.aqivalue{border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+box-shadow:0 1px 3px rgba(0,0,0,0.2);
+-moz-box-shadow:0 1px 3px rgba(0,0,0,0.2);
+-webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2);
+margin-top:2px;
+margin-bottom:2px;width:100%
+;text-align:center}
+
+.aqiwidget{background-color:#f6f9f7;
+border:1px solid white;
+min-width:100px;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+box-shadow:0 1px 3px rgba(0,0,0,0.6);
+-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+padding:0;margin:0;border-spacing:0}
+
+</style> <!-- <![endif]--> <!--[if IE]> <link rel="stylesheet" type="text/css" href="https://aqicn.org/css/style.ie.css" /> <![endif]-->
+
+<link rel='stylesheet' type='text/css' href='https://aqicn.org/css/style.min.css?_=1582516260' />
+<link rel="preconnect" href="https://waqi.info"> <link rel="preconnect" href="https://api.waqi.info">
+<link rel="preload" href="https://aqicn.org/jscripts/leaflet-gl/buildx/prod/map.002de51a7660eb926f51.js" as="script">
+<link rel="preload" href="https://api2.waqi.info/mapq2/nearest" as="fetch">
+<script  src='https://aqicn.org/air-cache/header/bundle.min.js?_=20240121.144800' type='text/javascript'>
+</script>
+<script type="text/javascript">
+var waqiStartTime = new Date().getTime();
+function jskey() { return (function(){ var u = "";
+decodeURIComponent("%603Z3F%5BWCyZGWpgIU9QTEKXYnukbB1%3ABztbGXhS%5Bx%3E%3E")
+.split('').forEach(function(c){ u += String.fromCharCode(c.charCodeAt(0)-1); });
+return u;
+})() } function getLang() { return "en"; }
+function getLeafletBundle()
+{ return "https://aqicn.org/jscripts/leaflet-light/build/prod/map.6a3294da4ead1a7be9c6.js"; }
+function getLeafletGlBundle()
+{ return "https://aqicn.org/jscripts/leaflet-gl/buildx/prod/map.002de51a7660eb926f51.js"; }
+function getWidgetBundle()
+{ return "https://aqicn.org/air-cache/widget/build/awui.js?_=20231231.100440"; }
+</script>
+<script>try{hit.app("aqicn-here@1.0.0");} catch(e){}</script>
+</head>
+<body>
+<div id="header" style='z-index:1001;'>
+<style type="text/css">
+.ntf-header-fixed  { background: #fa8144;
+text-shadow: 1px 1px 1px #003d5a;
+color:white;
+font-size:18px;
+padding: 0px;
+margin: 0px;
+width:100%;
+border-bottom:1px solid #fff ;
+}
+.ntf-header-fixed-inner { cursor: pointer;
+max-width: 1000px; }
+.ntf-header-fixed b { color:white; }
+.ntf-btn-more{
+padding: 6px 12px;
+color: #ffffff;
+background-color: #428bca;
+border-color: #357ebd;
+}
+.ntf-btn-less{ background-color: #fa671d;
+padding: 5px; }
+.ntf-btn-min{ background-color: #ccc;
+padding: 5px; }
+.ntf-btn { text-shadow: 1px 1px 1px #003d5a;
+color:white; display: inline-block;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+white-space: nowrap;
+line-height: 1.42857143;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.ntf-btn:hover{ background-color: #e6e6e6;
+border-color: #adadad; }
+.ntf-btn a:hover{ text-transform: none; }
+.ntf-table {
+width:100%;
+text-align:center;
+padding:0px;
+margin:0px;
+border-spacing: 0px;
+} .ntf-table td
+{ color:#faf0ea;
+padding:0 10 0 10;
+font-size:15px;
+line-height:1.5;
+}
+.ntf-large  {
+font-size:21px;
+}
+
+@media only screen and (max-width: 700px)
+{ .ntf-content-flag { display: none; } }
+@media only screen and (max-width: 500px)
+{ .ntf-content-choice .ntf-btn-more { font-size: 15px;}
+.ntf-content-choice .ntf-btn-less { font-size: 12px;}
+} @media only screen and (max-width: 420px)
+{ .ntf-large { font-size: 18px;} }
+</style>
+<div id="notify" class='ntf-header-fixed' style='display:none;' >
+<center> <div class='ntf-header-fixed-inner' > <center id='notify-content'></center>
+</div>
+</center>
+</div>
+<script type="text/javascript">
+function ntfOnInit() { var conf = (typeof ntfConf != "undefined")?ntfConf():{};
+try {aqisrv.ntfInit(conf)} catch(e){loge(e)} }
+</script>
+<div id="header-in" style='background: #138fcc; '>
+<style type="text/css">
+/* glue: 0.13 hash: 93f0b8008f */
+.sprite-isprt-web-logo,
+.sprite-isprt-web-world,
+.sprite-isprt-web-talk,
+.sprite-isprt-web-settings,
+.sprite-isprt-web-search,
+.sprite-isprt-web-pen,
+.sprite-isprt-web-link,
+.sprite-isprt-web-home,
+.sprite-isprt-web-heart2,
+.sprite-isprt-web-heart
+, .sprite-isprt-web-globe,
+.sprite-isprt-web-geofencing,
+.sprite-isprt-web-faq,
+.sprite-isprt-web-email,
+.sprite-isprt-web-dustmask,
+.sprite-isprt-web-direction,
+.sprite-isprt-web-vn,
+.sprite-isprt-web-ru,
+.sprite-isprt-web-pl,
+.sprite-isprt-web-kr,
+.sprite-isprt-web-jp,
+.sprite-isprt-web-hk,
+.sprite-isprt-web-gb,
+.sprite-isprt-web-fr,
+.sprite-isprt-web-es,
+.sprite-isprt-web-de,
+.sprite-isprt-web-cn,
+.sprite-isprt-web-br
+{ background-image: url('https://aqicn.org/images-static/isprites/web-icons/2019-12-01//isprt-web.png?_=1575188640'); background-repeat: no-repeat; }
+.sprite-isprt-web-logo {
+background-position: 0 0;
+width: 28px; height: 28px;
+}
+.sprite-isprt-web-world
+{ background-position: -28px 0;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-talk {
+background-position: 0 -28px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-settings {
+background-position: -25px -28px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-search {
+background-position: -53px 0;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-pen {
+background-position: -53px -25px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-link {
+background-position: 0 -53px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-home {
+background-position: -25px -53px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-heart2 {
+background-position: -50px -53px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-heart {
+background-position: -78px 0;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-globe {
+background-position: -78px -25px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-geofencing
+{ background-position: -78px -50px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-faq {
+background-position: 0 -78px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-email {
+background-position: -25px -78px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-dustmask {
+background-position: -50px -78px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-direction {
+background-position: -75px -78px;
+width: 25px; height: 25px;
+}
+.sprite-isprt-web-vn {
+background-position: -103px 0;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-ru {
+background-position: -103px -24px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-pl {
+background-position: -103px -48px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-kr {
+background-position: -103px -72px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-jp {
+background-position: 0 -103px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-hk {
+background-position: -24px -103px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-gb {
+background-position: -48px -103px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-fr {
+background-position: -72px -103px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-es {
+background-position: -96px -103px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-de {
+background-position: -127px 0;
+width: 24px; height: 24px; }
+.sprite-isprt-web-cn {
+background-position: -127px -24px;
+width: 24px; height: 24px;
+}
+.sprite-isprt-web-br {
+background-position: -127px -48px;
+width: 24px; height: 24px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.0),
+screen and (min--moz-device-pixel-ratio: 1.0),
+screen and (-o-min-device-pixel-ratio: 100/100),
+screen and (min-device-pixel-ratio: 1.0),
+screen and (min-resolution: 1.0dppx)
+{
+.sprite-isprt-web-logo, .sprite-isprt-web-world,
+.sprite-isprt-web-talk, .sprite-isprt-web-settings,
+.sprite-isprt-web-search, .sprite-isprt-web-pen,
+.sprite-isprt-web-link, .sprite-isprt-web-home,
+.sprite-isprt-web-heart2, .sprite-isprt-web-heart,
+.sprite-isprt-web-globe, .sprite-isprt-web-geofencing,
+.sprite-isprt-web-faq, .sprite-isprt-web-email,
+.sprite-isprt-web-dustmask, .sprite-isprt-web-direction,
+.sprite-isprt-web-vn, .sprite-isprt-web-ru,
+.sprite-isprt-web-pl, .sprite-isprt-web-kr,
+.sprite-isprt-web-jp, .sprite-isprt-web-hk,
+.sprite-isprt-web-gb, .sprite-isprt-web-fr,
+.sprite-isprt-web-es, .sprite-isprt-web-de,
+.sprite-isprt-web-cn,
+.sprite-isprt-web-br
+{
+background-image: url('https://aqicn.org/images-static/isprites/web-icons/2019-12-01//isprt-web.png?_=1575188640');
+-webkit-background-size: 151px 127px;
+-moz-background-size: 151px 127px;
+background-size: 151px 127px; } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2.0),
+screen and (min--moz-device-pixel-ratio: 2.0),
+screen and (-o-min-device-pixel-ratio: 200/100),
+screen and (min-device-pixel-ratio: 2.0),
+screen and (min-resolution: 2.0dppx)
+{
+.sprite-isprt-web-logo, .sprite-isprt-web-world,
+.sprite-isprt-web-talk, .sprite-isprt-web-settings,
+.sprite-isprt-web-search, .sprite-isprt-web-pen,
+.sprite-isprt-web-link, .sprite-isprt-web-home,
+.sprite-isprt-web-heart2, .sprite-isprt-web-heart,
+.sprite-isprt-web-globe, .sprite-isprt-web-geofencing,
+.sprite-isprt-web-faq, .sprite-isprt-web-email,
+.sprite-isprt-web-dustmask, .sprite-isprt-web-direction,
+.sprite-isprt-web-vn, .sprite-isprt-web-ru,
+.sprite-isprt-web-pl, .sprite-isprt-web-kr,
+.sprite-isprt-web-jp, .sprite-isprt-web-hk,
+.sprite-isprt-web-gb, .sprite-isprt-web-fr,
+.sprite-isprt-web-es, .sprite-isprt-web-de,
+.sprite-isprt-web-cn,
+.sprite-isprt-web-br
+{
+background-image: url('https://aqicn.org/images-static/isprites/web-icons/2019-12-01//isprt-web@2x.png?_=1575188640');
+-webkit-background-size: 151px 127px;
+-moz-background-size: 151px 127px;
+background-size: 151px 127px;
+}
+}
+
+#header-footer-menu {
+height: 34px;
+background: #0086c8;
+border-top: 1px solid #88ccdb;
+box-shadow: 0 0px 1px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+display: none;
+}
+
+.hdrshare {
+overflow: hidden;
+display: block;
+height: 20px;
+position: absolute;
+margin-top: 6px;
+left: 330px;
+width: calc(100% - 340px);
+font-size: 12px;
+color: white;
+}
+
+@media only screen and (max-width: 970px)
+{ body>#header { position: relative; }
+#header-spacer
+{ display: none !important; }
+.hsearch { display: none !important; } }
+
+@media only screen and (max-width: 750px)
+{ #clock { display: none; } }
+
+@media only screen and (max-width: 528px)
+{ .hdrshare { display: none; width: 0px; } }
+
+.hdrlang {
+position: absolute;
+left: 32px;
+margin-top: 4px;
+font-size: 12px;
+}
+
+.hdrlang
+
+.hdrlang-flags
+{
+overflow: hidden;
+height: 26px;
+}
+
+.hdrlang:hover #hdrlang-navigation {
+display: block;
+height: auto;
+}
+#hdrlang-navigation {
+-webkit-transition: height 2s;
+transition: height 2s;
+position: absolute;
+height: 0px;
+display: none;
+z-index: 100;
+width: 100%;
+box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+background-color: #f8f8f8;
+min-width: 300px;
+left:0px;
+}
+.hdrlang-navigation {
+padding: 5px;
+min-width: 280px;
+}
+
+.hdrlang-navigation a:hover {
+text-decoration: none;
+}
+
+.hdrlang-navigation .item:hover {
+background-color: #eee;
+}
+
+.hdrlang-navigation .item {
+padding: 0 2px; line-height: 1;
+}
+
+.hdrlang-navigation .item div {
+font-size: 28px;
+line-height: 20px;
+}
+
+.hdrlang-navigation .name span {
+color: #888;
+font-size: 16px;
+}
+
+.hdrlang-navigation .name {
+font-size: 18px;
+font-variant: small-caps;
+color: #444;
+}
+
+.hdrlang-navigation .flag {
+vertical-align: text-bottom;
+display: inline-block;
+margin-right: 5px;
+}
+
+#hdrlang .hdrlang-flags a.touch-no-click { pointer-events: none; }
+.hdrlang-flags div {
+border: 0px;
+vertical-align: bottom;
+margin: 1px;
+display: inline-block;
+font-size: 28px;
+line-height: 20px;
+}
+
+</style>
+
+<div style="position:absolute;
+z-index:2000;
+margin-top:2px;
+left:2px;">
+<a href="/home/">
+<div class="sprite-isprt-web-logo">
+
+</div>
+</a>
+</div>
+<div class='hdrlang' id='hdrlang'>
+<div class='hdrlang-flags'>
+<a href='https://aqicn.org/here/'>
+<div title='English' class='sprite-isprt-web-gb flag-en'>
+</div></a><a href='https://aqicn.org/here/cn/'>
+
+<div title='Chinese' class='sprite-isprt-web-cn flag-zh-CN'>
+
+</div>
+</a>
+<a href='https://aqicn.org/here/jp/'>
+<div title='Japanese' class='sprite-isprt-web-jp flag-ja'>
+
+</div>
+</a>
+<a href='https://aqicn.org/here/es/'>
+<div title='Spanish' class='sprite-isprt-web-es flag-es'></div></a>
+<a href='https://aqicn.org/here/kr/'>
+<div title='Korean' class='sprite-isprt-web-kr flag-ko'></div></a>
+<a href='https://aqicn.org/here/ru/'><div title='Russian' class='sprite-isprt-web-ru flag-ru'>
+
+</div></a>
+<a href='https://aqicn.org/here/hk/'>
+<div title='Traditional Chinese' class='sprite-isprt-web-hk flag-zh-TW'></div></a>
+<a href='https://aqicn.org/here/fr/'><div title='French' class='sprite-isprt-web-fr flag-fr'></div></a>
+<a href='https://aqicn.org/here/pl/'>
+<div title='Polish' class='sprite-isprt-web-pl flag-pl'></div></a>
+<a href='https://aqicn.org/here/de/'><div title='German' class='sprite-isprt-web-de flag-de'></div></a>
+<a href='https://aqicn.org/here/pt/'><div title='Portuguese' class='sprite-isprt-web-br flag-pt'></div>
+</a>
+<a href='https://aqicn.org/here/vn/'><div title='Vietnamese' class='sprite-isprt-web-vn flag-vi'></div></a>
+<a href='https://aqicn.org/here/it/'><div title='Italian' class='sprite-isprt-web-it flag-it'>🇮🇹</div></a>
+<a href='https://aqicn.org/here/id/'><div title='Indonesian' class='sprite-isprt-web-id flag-id'>🇮🇩</div></a>
+<a href='https://aqicn.org/here/nl/'><div title='Dutch' class='sprite-isprt-web-nl flag-nl'>🇳🇱</div></a>
+<a href='https://aqicn.org/here/fa/'><div title='Persian' class='sprite-isprt-web-ir flag-fa'>🇮🇷</div></a>
+<a href='https://aqicn.org/here/th/'><div title='Thai' class='sprite-isprt-web-th flag-th'>🇹🇭</div></a>
+<a href='https://aqicn.org/here/hu/'><div title='Hungarian' class='sprite-isprt-web-hu flag-hu'>🇭🇺</div></a>
+<a href='https://aqicn.org/here/el/'><div title='Greek' class='sprite-isprt-web-gr flag-el'>🇬🇷</div></a>
+<a href='https://aqicn.org/here/ro/'><div title='Romanian' class='sprite-isprt-web-ro flag-ro'>🇷🇴</div></a>
+<a href='https://aqicn.org/here/bg/'><div title='Bulgarian' class='sprite-isprt-web-bg flag-bg'>🇧🇬</div></a>
+<a href='https://aqicn.org/here/ur/'><div title='Urdu' class='sprite-isprt-web-pk flag-ur'>🇵🇰</div></a>
+<a href='https://aqicn.org/here/hi/'><div title='Hindi' class='sprite-isprt-web-in flag-hi'>🇮🇳</div></a>
+<a href='https://aqicn.org/here/ar/'><div title='Arabic' class='sprite-isprt-web-ae flag-ar'>🇦🇪</div></a>
+<a href='https://aqicn.org/here/sr/'><div title='Serbian' class='sprite-isprt-web-rs flag-sr'>🇷🇸</div></a>
+<a href='https://aqicn.org/here/bn/'><div title='Bangla' class='sprite-isprt-web-bd flag-bn'>🇧🇩</div></a>
+<a href='https://aqicn.org/here/bs/'><div title='Bosnian' class='sprite-isprt-web-ba flag-bs'>🇧🇦</div></a>
+<a href='https://aqicn.org/here/hr/'><div title='Croatian' class='sprite-isprt-web-hr flag-hr'>🇭🇷</div></a>
+</div><div id='hdrlang-navigation'>
+<div id='hdrlang-navigation-inner' class='hdrlang-navigation'>
+<a href='https://aqicn.org/here/' class='lang-en'>
+<div class='item'>
+<div class='flag sprite-isprt-web-gb'></div>
+<span class='name'>English</span></div></a>
+<a href='https://aqicn.org/here/cn/' class='lang-zh-CN'>
+<div class='item'><div class='flag sprite-isprt-web-cn'></div>
+<span class='name'>Chinese <span>- 简体中文</span></span>
+</div></a>
+<a href='https://aqicn.org/here/jp/' class='lang-ja'>
+<div class='item'><div class='flag sprite-isprt-web-jp'></div>
+<span class='name'>Japanese <span>- 日本</span></span></div></a>
+<a href='https://aqicn.org/here/es/' class='lang-es'>
+<div class='item'><div class='flag sprite-isprt-web-es'></div>
+<span class='name'>Spanish <span>- español</span></span></div></a>
+<a href='https://aqicn.org/here/kr/' class='lang-ko'>
+<div class='item'><div class='flag sprite-isprt-web-kr'></div>
+<span class='name'>Korean <span>- 한국의</span></span></div></a>
+<a href='https://aqicn.org/here/ru/' class='lang-ru'><div class='item'><div class='flag sprite-isprt-web-ru'></div>
+<span class='name'>Russian <span>- русский</span></span></div></a>
+<a href='https://aqicn.org/here/hk/' class='lang-zh-TW'>
+<div class='item'><div class='flag sprite-isprt-web-hk'></div><
+span class='name'>Traditional Chinese <span>- 繁體中文</span></span></div></a>
+<a href='https://aqicn.org/here/fr/' class='lang-fr'><div class='item'>
+<div class='flag sprite-isprt-web-fr'></div>
+<span class='name'>French <span>- Francais</span></span></div></a>
+<a href='https://aqicn.org/here/pl/' class='lang-pl'>
+<div class='item'><div class='flag sprite-isprt-web-pl'></div>
+<span class='name'>Polish <span>- Polski</span></span></div></a>
+<a href='https://aqicn.org/here/de/' class='lang-de'>
+<div class='item'><div class='flag sprite-isprt-web-de'></div>
+<span class='name'>German <span>- Deutsch</span></span></div></a>
+<a href='https://aqicn.org/here/pt/' class='lang-pt'><div class='item'>
+<div class='flag sprite-isprt-web-br'></div>
+<span class='name'>Portuguese <span>- Português</span></span></div></a>
+<a href='https://aqicn.org/here/vn/' class='lang-vi'>
+<div class='item'><div class='flag sprite-isprt-web-vn'></div>
+<span class='name'>Vietnamese <span>- Tiếng Việt</span></span></div></a>
+<a href='https://aqicn.org/here/it/' class='lang-it'><div class='item'>
+<div class='flag sprite-isprt-web-it'>🇮🇹</div>
+<span class='name'>Italian <span>- Italiano</span></span></div></a>
+<a href='https://aqicn.org/here/id/' class='lang-id'>
+<div class='item'><div class='flag sprite-isprt-web-id'>🇮🇩</div>
+<span class='name'>Indonesian <span>- bahasa Indonesia</span></span></div></a>
+<a href='https://aqicn.org/here/nl/' class='lang-nl'><div class='item'>
+<div class='flag sprite-isprt-web-nl'>🇳🇱</div>
+<span class='name'>Dutch <span>- Nederlands</span></span></div></a>
+<a href='https://aqicn.org/here/fa/' class='lang-fa'><div class='item'>
+<div class='flag sprite-isprt-web-ir'>🇮🇷</div>
+<span class='name'>Persian <span>- فارسی</span></span></div></a>
+<a href='https://aqicn.org/here/th/' class='lang-th'><div class='item'><div class='flag sprite-isprt-web-th'>🇹🇭</div>
+<span class='name'>Thai
+<span>- ภาษาไทย</span>
+</span></div></a>
+<a href='https://aqicn.org/here/hu/' class='lang-hu'>
+<div class='item'>
+<div class='flag sprite-isprt-web-hu'>🇭🇺</div>
+<span class='name'>Hungarian <span>- Magyar</span></span>
+</div></a>
+<a href='https://aqicn.org/here/el/' class='lang-el'>
+<div class='item'>
+<div class='flag sprite-isprt-web-gr'>🇬🇷</div>
+<span class='name'>Greek <span>- Ελληνικά</span></span></div></a>
+<a href='https://aqicn.org/here/ro/' class='lang-ro'>
+<div class='item'><div class='flag sprite-isprt-web-ro'>🇷🇴</div>
+<span class='name'>Romanian <span>- Română</span></span></div></a>
+<a href='https://aqicn.org/here/bg/' class='lang-bg'><div class='item'>
+<div class='flag sprite-isprt-web-bg'>🇧🇬</div>
+<span class='name'>Bulgarian <span>- български</span></span></div></a>
+<a href='https://aqicn.org/here/ur/' class='lang-ur'><div class='item'>
+<div class='flag sprite-isprt-web-pk'>🇵🇰</div>
+<span class='name'>Urdu <span>- اردو</span></span></div></a>
+<a href='https://aqicn.org/here/hi/' class='lang-hi'>
+<div class='item'><div class='flag sprite-isprt-web-in'>🇮🇳</div>
+<span class='name'>Hindi <span>- हिंदी</span></span></div></a>
+<a href='https://aqicn.org/here/ar/' class='lang-ar'>
+<div class='item'><div class='flag sprite-isprt-web-ae'>🇦🇪</div>
+<span class='name'>Arabic <span>- العربية</span></span></div></a>
+<a href='https://aqicn.org/here/sr/' class='lang-sr'><div class='item'>
+<div class='flag sprite-isprt-web-rs'>🇷🇸</div>
+<span class='name'>Serbian <span>- Српски</span></span></div></a>
+<a href='https://aqicn.org/here/bn/' class='lang-bn'>
+<div class='item'><div class='flag sprite-isprt-web-bd'>🇧🇩</div>
+<span class='name'>Bangla <span>- বাংলা</span></span></div></a>
+<a href='https://aqicn.org/here/bs/' class='lang-bs'>
+<div class='item'><div class='flag sprite-isprt-web-ba'>🇧🇦</div>
+<span class='name'>Bosnian <span>- босански</span></span></div></a>
+<a href='https://aqicn.org/here/hr/' class='lang-hr'><div class='item'>
+<div class='flag sprite-isprt-web-hr'>🇭🇷</div>
+<span class='name'>Croatian <span>- hrvatski</span></span></div></a>
+</div>
+</div>
+</div>
+<div class="hdrshare">
+<script type="text/javascript">
+function initSharing() { aqisrv.here().then(function(where){ country = where.Country.IsoCode;
+if (country!='CN')
+{ loadScriptAsync("https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=643196515742584&autoLogAppEvents=1")
+} })
+.catch(function(e){
+console.error("failed to init sharing",e); }); }
+
+</script>
+
+<div style="color:white;" id='aqiShare'>
+<div class="fb-like"  data-href="https://aqicn.org/here/"  data-width="" data-layout="button_count"   data-action="like"  data-size="small"   data-lazy="true" data-colorscheme="dark" data-share="true"></div>
+</div>
+</div>
+<style type="text/css">
+/* SEARCH AND MORE */
+
+.hsearch {
+position: absolute;
+width:245px;
+height:32px;
+display: block;
+margin-top:0px;
+margin-bottom:7px;
+overflow:hidden;
+z-index:100;
+right:54px;
+}
+
+.hsearch #hsearch-btn {
+width:25px;
+height:25px;
+float:left;
+}
+
+.hsearch-inner {
+width:245px;
+}
+.hsearch .bottom, .hsearch .left, .hsearch .right {
+position: absolute;
+background-color: #a2a2a2
+}
+
+.hsearch .left, .hsearch .right {
+height: 5px; width: 1px
+}
+
+.hsearch .left {
+top: 22px;
+left: 28px;
+background-color:white;
+}
+
+.hsearch .right {
+top: 22px;
+left: 215px;
+background-color:white;
+}
+
+.hsearch form {
+margin-top: 2px;
+width: 162px;
+float:left;
+}
+
+.hsearch form input {
+color: white;
+font-size: 15px;
+width: 178px;
+border: none;
+margin-left: 6px;
+position: relative;
+background-color: transparent;
+border-bottom:1px solid white;
+padding:0 0 0 4px;
+outline:none;
+height:24px;
+font-family: Cambria,'Palatino Linotype','Book Antiqua','URW Palladio L',serif;
+}
+
+.hsearch form input:focus {
+font-weight: bold; /* Added semicolon */
+color: white;
+}
+
+.hsearch-result {
+background-color: #f8f8f8;
+border-left:1px solid #aaaaaa;
+border-bottom:1px solid #aaaaaa;
+width:270px;
+z-index: 9999;
+right: 38px;
+top: 32px;
+position: fixed;
+-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+display: none;
+}
+.hsearch-result .searchTitle {
+color:black;
+}
+
+.hsearch-aqi  {
+border-radius:1px;
+-moz-border-radius:1px;
+-webkit-border-radius:1px;
+padding:5px 1px 5px 1px;
+margin:0 3px 0 0;
+width:28px;
+text-align:center;
+font-size:12px;
+display: inline-block;
+}
+
+.hsearch-result a {
+display:block;
+font-size: 15px;
+padding: 0 3px 0 3px;
+min-height: 22px;
+color:#444;
+max-width:300px;
+text-overflow:ellipsis;
+overflow:hidden;
+border: 1px solid transparent;
+}
+
+.hsearch-result a:nth-child(n+2) {
+border-top: 1px solid #ccc;
+}
+
+#hsearch-loading svg,#hsearch-magnifier svg {
+width: 25px;
+height: 25px;
+margin-top: 3px;
+}
+
+#hsearch-loading path,#hsearch-magnifier path {
+fill:white;
+}
+</style>
+
+<div class="hsearch active" id="hsearch-container" style='display:none;'>
+<div class="hsearch-inner"> <div id="hsearch-btn"> <div id="hsearch-magnifier"></div>
+<div id="hsearch-loading"></div>
+</div>
+<div class="left"></div>
+<form onsubmit="return headSearchSubmit()" action='/search/' >
+<input id="hsearch-input" type="text" value="" autocomplete="off" name="q" onblur='headSearchBlur()'> </form>
+<div class="right"></div>
+</div>
+</div>
+<div class='hsearch-result' id='hsearch-result' > </div>
+<script type="text/javascript">
+function initHeadSearch() { try { aqisearch.init({"type":"header-search","i18n":{"error_nearest":"Sorry, an error happened"},"divs":{"magnifier":"hsearch-magnifier","loading":"hsearch-loading","input":"hsearch-input","results":"hsearch-result"}});
+$("#hsearch-container").show(); } catch (e) { loge("head-search",e); } }
+function headSearchBlur() { log("blur"); $("#hsearch-result").slideUp(); }
+function headSearchSubmit() { var val = $( "#hsearch-input" ).val();
+if (val.length>0) { var url = "/search/#q="+val; window.location.href = url;
+if (window.location.pathname=="/search/")  window.location.reload(); } return false; }
+</script>
+
+<div id="clock"><span id="ClockTime"></span></div>
+</div>
+<div id="fixed-header-shadow-down-out">
+<div id="fixed-header-shadow-down"></div>
+</div>
+</div>
+<div id='header-top-mark'></div>
+<div style='height:32px;' id='header-spacer'></div>
+<div id='header-footer-menu'></div>
+
+<style type="text/css">
+
+.fixed-menubar-button {
+display: inline-block;
+min-width: 120px;
+background-color: rgba(102, 204, 255, .5);
+margin: 3px;
+font-weight: normal;
+border-radius: 2px;
+padding: 5px 0; }
+
+.fixed-menubar-button:hover { background: #0086c8; }
+#fixed-menubar {
+bottom: 0px;
+z-index: 8000;
+position: fixed;
+background: #0086c8;
+height: 38px;
+width: 100%;
+text-align: left;
+box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+-webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#fixed-menubar-container { padding-top: 5px; }
+
+.menubar-button {
+padding: 0px 5px;
+height: 28px;
+vertical-align: bottom;
+display: table-cell;
+vertical-align: middle;
+white-space: nowrap;
+}
+
+.menubar-cell:hover {
+background-color: rgb(127, 194, 227);
+}
+
+.menubar-icon, .menubar-icon-main {
+vertical-align: bottom;
+display: inline-block;
+margin-right: 5px;
+}
+
+.menubar-text {
+text-transform: uppercase;
+color: white;
+font-size: 18px;
+overflow: hidden;
+cursor: pointer;
+}
+@media only screen and (max-width: 920px)
+{ .menubar-icon { display: none; }
+.menubar-text-second { display: none; }
+#fixed-footer-menu-buttons-with-text { display: block !important; }
+.menubar-button { padding: 0px 15px; }
+.menubar-text { padding: 0; } }
+@media only screen and (max-width: 800px)
+{ .menubar-button { padding: 0px 10px; }
+.menubar-text { font-weight: normal !important; }
+.menubar-text { font-size: 21px; }
+.fixed-menubar-table { width: 100%; } }
+@media only screen and (max-width: 680px)
+{ .menubar-text { font-size: 16px; }
+.menubar-button { padding: 0px 5px; } }
+@media only screen and (max-width: 600px)
+{ .menubar-text { font-size: 15px; } }
+@media only screen and (max-width: 520px)
+{ .menubar-text { font-size: 14px; }
+.menubar-button { padding: 0px 3px; } }
+@media only screen and (max-width: 490px)
+{ .menubar-text { font-size: 13px; } }
+@media only screen and (max-width: 470px)
+{ .menubar-text { font-size: 12px; }
+.menubar-button { padding: 0px 2px; } }
+@media only screen and (max-width: 420px)
+{ .menubar-text { font-size: 11px; } }
+@media only screen and (max-width: 320px)
+{ .menubar-text { font-size: 10px; }
+.menubar-button { padding: 0px 1px; } }
+
+.fixed-menubar-table {
+border-right: 1px solid rgb(127, 194, 227);
+font-weight: normal;
+font-size: 22px;
+border-spacing: 0;
+padding: 0;
+margin: 0;
+}
+
+.fixed-menubar-table td {
+border-left: 1px solid rgb(127, 194, 227);
+vertical-align: middle;
+height: 38px; padding: 0;
+margin: 0;
+}
+
+a.menubar-text {
+text-decoration: none;
+font-weight: bold;
+}
+
+a.menubar-text:hover {
+text-decoration: underline;
+}
+
+a.menubar-text-second:hover {
+text-decoration: underline;
+}
+
+</style>
+
+<script type="text/javascript">
+function go2home() { var url = 'https://aqicn.org/here/';
+; url = AqiSettings.getCurrentStationUrl() || url; window.location.href = url; }
+</script>
+<div id='fixed-menubar'>
+<center>
+<table class="fixed-menubar-table">
+<tr> <td class='menubar-cell'><a onclick='go2home();'  class='menubar-text'>
+<center>
+
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-home menubar-icon-main' title='home'></div>
+<span class='menubar-text-second'>home</span>
+</div></a></td>
+<td class='menubar-cell'>
+<a href='/here/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-geofencing menubar-icon-main' title='Here'></div>
+<span class='menubar-text-second'>Here</span></div></a></td>
+<td class='menubar-cell'><a href='/map/world/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-globe menubar-icon-main' title='map'></div>
+<span class='menubar-text-second'>map</span></div></a></td>
+<td class='menubar-cell'><a href='/mask/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-dustmask menubar-icon-main' title='mask'></div>
+<span class='menubar-text-second'>mask</span></div></a></td>
+<td class='menubar-cell'><a href='/faq/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-faq menubar-icon-main' title='faq'></div>
+<span class='menubar-text-second'>faq</span></div></a></td>
+<td class='menubar-cell'><a href='/city/all/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-search menubar-icon-main' title='search'></div>
+<span class='menubar-text-second'>search</span></div></a></td>
+<td class='menubar-cell'><a href='/contact/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-talk menubar-icon-main' title='contact'></div>
+<span class='menubar-text-second'>contact</span></div></a></td>
+<td class='menubar-cell'><a href='/links/'  class='menubar-text'>
+<center>
+<div class='menubar-button' ontouchend='this.style.backgroundColor="rgb(127,194,227)";'>
+<div class='sprite-isprt-web-link menubar-icon-main' title='links'></div>
+<span class='menubar-text-second'>links</span></div></a></td>
+<td class='menubar-cell'>
+<a onclick='settingsMenu.show();' class='menubar-text' onmouseover='settingsMenu.onmouseover();' onmouseout='settingsMenu.onmouseout();' style='position:relative'>
+<center>
+<div class='menubar-button'> <div class='sprite-isprt-web-settings menubar-icon-main' id='footer-settings-img'></div>
+</div>
+</a>
+</tr>
+</table>
+</center>
+</div>
+
+<div style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'>
+<div class='h1section'><h1><div id='h1header1' style='padding:2px;;'>Free real-time air pollution information - for more than 100 countries in the world.</div>
+</h1>
+</div>
+<script type='text/javascript'>  ;
+if (!isMobileUA) { fitLine('#h1header1',.88,{maxfs:45}); };
+</script>
+</div>
+
+<script>
+function getPageTitleInfo() { return {"id":"h1header1","txt":"__CITY__ Air Pollution: Real-time Air Quality Index (AQI)"};
+}
+</script>
+
+<script>
+var useHotJarFeedback = true; </script>
+<div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;margin:0px!important;'><script>
+var nearestPromise2 = fetch("https://api2.waqi.info/mapq2/nearest").then(function(x) { return x.json(); }).catch(function(e) { hit.error("nearest-fetch", e); }); </script>
+<style type="text/css">
+
+#citysearch {
+font-size: 28px !important;
+height: 50px;
+border: 1px solid #888;
+background-color: #fff;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+color: black !important; /* Corrected property */
+}
+
+
+#autLocateBtn {
+font-size: 21px !important;
+line-height: 25px !important;
+height: 50px !important;
+padding: 5px !important;
+width: 160px !important;
+}
+
+.oaqi0 {
+background-color:#aaaaaa;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+
+.iaqi0 {
+color:#dddddd;
+text-shadow: 1px 1px 0px #000000;
+}
+
+.oaqi50 {
+background-color:#009966;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+.iaqi50 {
+color:#ffffff;
+text-shadow: 1px 1px 0px #000000;
+}
+
+.oaqi100 {
+background-color:#ffde33;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+
+.iaqi100 {
+color:#000000;
+text-shadow: 1px 1px 0px #ffffff;
+}
+
+.oaqi150 {
+background-color:#ff9933;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+
+.iaqi150 {
+color:#000000;
+text-shadow: 1px 1px 0px #ffffff;
+}
+
+.oaqi200 {
+background-color:#cc0033;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+.iaqi200 {
+color:#ffffff;
+text-shadow: 1px 1px 0px #000000;
+}
+
+.oaqi250 {
+background-color:#660099;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+
+.iaqi250 {
+color:#ffffff;
+text-shadow: 1px 1px 0px #000000;
+}
+
+.oaqi300 {
+background-color:#660099;
+min-width:35px;
+display:inline-block;
+text-align:center;
+}
+
+.iaqi300 {
+color:#ffffff;
+text-shadow: 1px 1px 0px #000000;
+}
+
+a.cityaqi {
+color: #0086c8;
+text-decoration: none;
+}
+
+a.cityaqi:link {
+text-decoration: none;
+}
+
+a.cityaqi:visited {
+text-decoration: none;
+}
+
+a.cityaqi:hover { text-decoration: none; }
+.citysync:hover { background-color: #0086c8; color: white; }
+
+#map_canvas { height: 600px; width: 100%; z-index: 20; }
+
+table#map_table { border-collapse: collapse; }
+td#map_table { padding: 0; }
+#map_table { width: 100%; height: 600px; border-bottom: 1px solid grey; }
+
+.carousel-elt:hover {
+background: #8cbfd9;
+color: white;
+text-shadow: 0 1px 0 black; }
+
+.nearest-station {
+border-bottom: 1px solid #eee;
+width: 100%;
+display: table;
+text-align: left; }
+.nearest-station:hover {
+background-color: #0086c8;
+color: white; }
+.nearest-station-utime { font-size: 50%; color: #888; }
+.nearest-station:hover .nearest-station-utime { color: white; }
+
+</style>
+
+<style>
+
+input#map-city-search-input:focus { outline: none; } input#map-city-search-input { width: 100%; border: 0px; font-family: inherit; font-size: 20px; box-sizing: border-box; } #map-city-search svg { width: 28px; height: 28px; padding: 5px 0; } #map-city-search-results { background: white; z-index: 88888; position: absolute; width: 100%; } #map-city-search-results a { width: 100%; display: block; border: 1px solid white; font-size: 20px; padding: 3px; } #map-city-search-results a:hover { background: #f8f8f8; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-decoration: none; } #map-city-search { box-sizing: border-box; border-spacing: 0; width: 100%; } #map-city-search tr { border-bottom: 1px solid black; } </style>
+<table id='map-city-search'>
+<tr style='display: none;'>
+<td style='width:50px;'>
+<div style='width:50px;'>
+<center> <span id='map-city-search-loading' style='display:none'></span>
+<span id='map-city-search-magnifier' style=''></span>
+</div> <td style='width: 100%'>
+<input id='map-city-search-input' placeholder="Enter a city name"> </td> </tr> </table>
+<div style='height: 0px;'> <div id='map-city-search-results'></div> </div>
+<style type="text/css">
+.cp-spinner { width: 48px; height: 48px; display: inline-block; box-sizing: border-box; position: relative; animation: cp-spinner-animate 2s ease-in-out infinite }
+
+@keyframes cp-spinner-animate { 0% { transform: scale(.9); transform-origin: center } 15% { transform: scale(1.2); transform-origin: center } 30% { transform: scale(.9); transform-origin: center } 45% { transform: scale(1.2); transform-origin: center } 100%, 60% { transform: scale(.9); transform-origin: center } }
+
+#mapwait { z-index: 80; }
+#mapwaitimg { z-index: 81; position: absolute; top: 50%; left: 50%; margin-top: -75px; margin-left: -100px; text-align: center; width: 200px; height: 150px; }
+</style>
+<div id='mapwait'><div id='mapwaitimg'><div class="cp-spinner" >
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" viewBox="0 0 512 512">
+<filter id="dropshadow" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+<feOffset dx="2" dy="2" result="offsetblur"/>
+<feComponentTransfer><feFuncA slope=".5" type="linear"/>
+</feComponentTransfer>
+<feMerge><feMergeNode/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge></filter>
+<circle cx="256.021" cy="255.952" r="247.341" fill="#59d8ff" filter="url(#dropshadow)"/>
+<path fill="#00c3ff" d="M350.475 402.384c-136.603 0-247.342-110.739-247.342-247.341 0-40.264 9.682-78.243 26.751-111.84C57.328 86.312 8.677 165.435 8.677 255.954c0 136.602 110.739 247.341 247.341 247.341 96.338 0 179.752-55.116 220.591-135.501-36.937 21.948-80.051 34.59-126.134 34.59z"/>
+<path fill="#b4ff87" d="M298.941 305.418l-4.391-3.076a25.728 25.728 0 0 0-19.227-4.263l-3.811.672a17.151 17.151 0 0 1-12.818-2.842l-29.745-20.827a42.886 42.886 0 0 0-32.049-7.105l-35.763 6.306h.001l39.568 40.073 7.417 43.186 8.761 46.023a85.78 85.78 0 0 0 12.491 31.754l17.023 26.267a10.463 10.463 0 0 0 10.379 4.651l.068-.01c5.799-.895 9.728-6.383 8.708-12.16l-5.59-31.711 15.427-14.737a25.734 25.734 0 0 0 7.843-16.178l2.061-21.713a10.818 10.818 0 0 1 8.821-9.065l5.309-.937a10.817 10.817 0 0 0 8.911-9.89l1.52-21.523a25.75 25.75 0 0 0-10.914-22.895z"/>
+<path fill="#9bf57d" d="M282.836 393.556c-26.903-7.735-52.086-20.061-74.715-36.016l8.76 46.023a85.772 85.772 0 0 0 12.491 31.754l17.023 26.267a10.464 10.464 0 0 0 10.378 4.651l.068-.01c5.799-.895 9.729-6.382 8.708-12.16l-5.59-31.71 15.427-14.739c3.953-3.773 6.484-8.719 7.45-14.06z"/>
+<g fill="#b4ff87"><path d="M95.404 266.414l34.774 1.048 21.001-1.773c-2.468-13.997 4.326-42.677 4.326-42.677l55.617-86.786a8.574 8.574 0 0 1 5.538-3.527l12.742-2.247a8.582 8.582 0 0 0 6.663-5.777l1.631-4.978a8.579 8.579 0 0 0-4.729-10.537l-22.874-9.951c-5.807-2.526-5.845-10.748-.062-13.328l25.695-11.46-1.878-10.652-61.338 10.815-39.715 21.776-2.526-14.324-10.245 1.806a34.307 34.307 0 0 0-22.148 14.111l-4.474 6.39a8.577 8.577 0 0 1-11.947 2.106l-10.04-7.03-6.301-.257C42.427 126.7 25.717 158.988 16.479 193.89l23.207 42.856a21.633 21.633 0 0 0 22.777 11.003l5.95-1.049 6.91 9.315a25.73 25.73 0 0 0 20.081 10.399zM479.254 149.35l-3.086-.301-12.215 2.154a25.74 25.74 0 0 0-13.307 6.735l-4.955 4.733a25.73 25.73 0 0 1-26.982 5.423l-18.189-6.968a51.46 51.46 0 0 0-27.352-2.625l-19.49 3.436a25.735 25.735 0 0 0-20.721 20.079l-3.933 18.824a49.544 49.544 0 0 0 26.103 54.326l1.434.726a49.541 49.541 0 0 0 30.993 4.596l.632-.112c13.998-2.468 27.344 6.879 29.811 20.874L423 309.618a68.61 68.61 0 0 0 10.158 25.658l18.673 28.538c4.674 7.144 12.507 11.22 20.818 11.527 19.551-35.402 30.709-76.085 30.709-119.388.001-38.173-8.66-74.32-24.104-106.603zM450.454 124.422l13.326-2.35.132-.049a248.476 248.476 0 0 0-84.57-80.439l-5.147 8.422-6.203 8.86a10.811 10.811 0 0 0-1.792 8.083l3.165 17.947a23.514 23.514 0 0 1-11.963 24.768l-16.318 7.522a17.157 17.157 0 0 0-9.713 18.56l2.171 12.32c1.647 9.331 10.544 15.562 19.875 13.916l14.497-2.556a17.156 17.156 0 0 0 13.622-12.571l5.806-22.288 23.976-4.228a34.309 34.309 0 0 1 15.741.903l7.655 2.276a34.264 34.264 0 0 0 15.74.904z"/>
+</g>
+<path fill="#9bf57d" d="M130.178 267.461c-17.252-33.738-27.046-71.924-27.046-112.418 0-23.934 3.494-47.031 9.854-68.911-.23.061-.46.09-.692.152-5.731 2.504-10.77 6.458-14.419 11.667l-4.474 6.391a8.578 8.578 0 0 1-11.948 2.106l-10.04-7.03-6.105-.25c-.03.037-.248-.044-.355-.054-22.506 27.369-39.256 59.609-48.374 94.962l23.106 42.669a21.63 21.63 0 0 0 22.777 11.003l5.949-1.049 6.91 9.315a25.74 25.74 0 0 0 20.082 10.397l34.775 1.05z"/>
+<path fill="#ff6991" d="M308.327 155.186c-20.443 0-38.952 8.349-52.371 21.846-13.419-13.497-31.928-21.846-52.371-21.846-40.975 0-74.192 33.522-74.192 74.872 0 57.255 66.557 126.071 126.563 154.148 60.008-28.077 126.563-96.893 126.563-154.147 0-41.352-33.217-74.873-74.192-74.873z"/>
+<path fill="#ff507d" d="M210.152 220.897c0-24.228 9.118-45.705 23.201-59.389-9.117-4.04-19.172-6.321-29.768-6.321-40.976 0-74.193 33.52-74.193 74.871 0 57.255 66.557 126.072 126.563 154.149 12.159-5.689 24.567-13.114 36.656-21.712-42.055-32.807-82.459-91.604-82.459-141.598z"/>
+<path d="M508.045 211.558c-11.871-67.324-49.248-125.995-105.248-165.206C346.799 7.14 278.884-7.914 211.558 3.955 144.234 15.825 85.563 53.203 46.353 109.202 7.141 165.201-7.916 233.118 3.955 300.441s49.248 125.995 105.248 165.206C152.717 496.116 203.421 512 255.457 512c14.931 0 29.975-1.309 44.985-3.955 67.324-11.871 125.995-49.248 165.206-105.248 39.211-56 54.267-123.917 42.397-191.239zM406.75 128.939l2.373 13.454a8.59 8.59 0 0 0 9.948 6.966 8.589 8.589 0 0 0 6.967-9.949l-1.773-10.054 5.984 1.781a42.95 42.95 0 0 0 19.589 1.123l9.462-1.668a234.355 234.355 0 0 1 6.095 10.478l-5.12.902a34.076 34.076 0 0 0-17.672 8.944l-4.926 4.705c-4.583 4.379-11.3 5.834-17.268 3.785l-30.621-17.495 2.725-10.465 14.237-2.507zm61.853 235.765a17.286 17.286 0 0 1-11.697-7.577l-18.567-28.374a59.307 59.307 0 0 1-8.829-22.301l-4.973-28.205a34.016 34.016 0 0 0-9.037-17.773 8.588 8.588 0 1 0-12.365 11.923 16.893 16.893 0 0 1 4.485 8.832l4.973 28.205a76.388 76.388 0 0 0 11.372 28.723l18.567 28.374c4.207 6.43 10.379 11.139 17.403 13.612a243.953 243.953 0 0 1-8.358 12.8c-36.579 52.241-91.313 87.11-154.118 98.184-62.806 11.077-126.164-2.973-178.404-39.552s-87.11-91.312-98.184-154.118c-4.75-26.936-4.864-53.971-.577-80.19l12.079 22.305a30.058 30.058 0 0 0 31.693 15.309l.687-.12 3.708 4.999c6.328 8.531 16.049 13.564 26.668 13.806l7.174.164.2.002a8.59 8.59 0 0 0 .193-17.174l-7.174-.164a16.89 16.89 0 0 1-13.264-6.867l-6.871-9.263a8.585 8.585 0 0 0-8.39-3.341l-5.914 1.043a12.902 12.902 0 0 1-13.605-6.572l-21.516-39.736c7.191-25.636 18.738-50.15 34.462-72.606a242.291 242.291 0 0 1 8.513-11.405l7.594 5.318c7.732 5.415 18.426 3.528 23.84-4.204l4.449-6.354c3.912-5.586 9.763-9.314 16.478-10.497l1.729-.305.775 4.395.245 1.389v.001l1.481 8.398a8.59 8.59 0 0 0 9.948 6.966 8.589 8.589 0 0 0 6.967-9.949l-.412-2.337 32.846-18.008 33.253-5.864-2.329 1.039c-5.816 2.594-9.41 8.16-9.381 14.529.029 6.368 3.675 11.902 9.515 14.442l22.711 9.82-1.624 4.951a8.588 8.588 0 1 0 16.321 5.347l1.621-4.948a17.043 17.043 0 0 0-9.438-21.026l-19.936-8.673 22.752-10.147a8.59 8.59 0 0 0 4.961-9.334l-1.867-10.591a8.593 8.593 0 0 0-3.531-5.545 8.592 8.592 0 0 0-6.417-1.423L170.5 65.792a8.583 8.583 0 0 0-2.637.928L138.88 82.611l-.431-2.444a8.586 8.586 0 0 0-9.949-6.966l-10.187 1.796c-11.233 1.981-21.023 8.217-27.566 17.561l-4.366 6.339-6.269-4.39C115.413 55.9 162.165 30.105 214.541 20.87a241.533 241.533 0 0 1 41.967-3.69c38.168 0 75.574 9.169 109.553 26.904l-6.739 9.611a19.21 19.21 0 0 0-3.205 14.453l3.147 17.845a14.7 14.7 0 0 1-2.452 11.059 14.864 14.864 0 0 1-4.981 4.473l-23.789 12.024a8.59 8.59 0 0 0 7.748 15.331l23.911-12.084c.072-.037.144-.074.215-.113a32.12 32.12 0 0 0 10.968-9.778c4.9-6.998 6.78-15.483 5.297-23.894l-3.147-17.845a2.186 2.186 0 0 1 .358-1.618l7.67-10.939a244.907 244.907 0 0 1 11.885 7.813 250.624 250.624 0 0 1 4.369 3.139l-5.78 5.292a8.588 8.588 0 0 0 5.801 14.922 8.553 8.553 0 0 0 5.797-2.254l7.835-7.172a237.741 237.741 0 0 1 37.842 40.652l-1.951.344c-3.88.686-7.93.453-11.71-.671l-7.61-2.265a42.956 42.956 0 0 0-19.59-1.123l-23.841 4.204a8.592 8.592 0 0 0-6.82 6.293l-5.772 22.161a8.589 8.589 0 0 0 4.05 9.622l36.959 21.116a8.58 8.58 0 0 0 1.187.562 33.962 33.962 0 0 0 12.16 2.242c8.668 0 17.225-3.282 23.675-9.444l4.926-4.705a16.943 16.943 0 0 1 8.79-4.449l10.143-1.789c8.198 18.103 14.183 37.355 17.725 57.439 9.143 51.873 1.138 104.115-22.529 150.166z"/>
+<path d="M267.399 418.542a8.589 8.589 0 0 0-16.916 2.982l5.559 31.53c.11.622-.109 1.09-.311 1.373-.203.284-.576.642-1.268.748a1.814 1.814 0 0 1-1.801-.807l-16.926-26.117a76.275 76.275 0 0 1-11.168-28.384l-.995-5.691a8.588 8.588 0 0 0-9.939-6.981 8.588 8.588 0 0 0-6.981 9.939l.997 5.703a93.381 93.381 0 0 0 13.671 34.754l16.926 26.117c3.528 5.443 9.566 8.657 15.97 8.657.973 0 1.955-.074 2.936-.226a18.853 18.853 0 0 0 12.542-7.712 18.852 18.852 0 0 0 3.264-14.357l-5.56-31.528zM162.15 125.245a8.562 8.562 0 0 0 5.318-1.849l12.89-10.181a8.586 8.586 0 0 0 1.416-12.062 8.587 8.587 0 0 0-12.062-1.416l-12.89 10.181a8.586 8.586 0 0 0-1.416 12.062 8.57 8.57 0 0 0 6.744 3.265zM330.077 87.044a8.59 8.59 0 0 0 9.948 6.966 8.589 8.589 0 0 0 6.967-9.949l-2.962-16.799a8.587 8.587 0 0 0-9.949-6.967 8.589 8.589 0 0 0-6.967 9.949l2.963 16.8zM308.327 146.598c-19.312 0-37.623 6.63-52.371 18.821-14.748-12.191-33.06-18.821-52.371-18.821-45.645 0-82.78 37.44-82.78 83.459 0 28.463 15.226 61.717 42.875 93.638 24.819 28.655 57.127 53.545 88.638 68.288a8.574 8.574 0 0 0 7.278 0c31.511-14.743 63.817-39.633 88.636-68.288 27.648-31.921 42.875-65.176 42.875-93.638 0-46.02-37.135-83.459-82.78-83.459zm-52.371 228.078c-56.551-27.966-117.975-93.004-117.975-144.618 0-36.548 29.43-66.283 65.604-66.283 17.463 0 33.9 6.859 46.281 19.313a8.59 8.59 0 0 0 12.181 0c12.382-12.454 28.818-19.313 46.28-19.313 36.174 0 65.604 29.735 65.604 66.283 0 51.614-61.424 116.652-117.975 144.618z"/></svg>
+</div>
+</div>
+</div>
+<style> .leaflet-tooltip { font-size: 15px; font-family: "Noto Serif", Cambria, "Palatino Linotype", "Book Antiqua", "URW Palladio L", serif; } #map_canvas { direction: ltr; width: 100%; font-family: "Noto Serif", Cambria, "Palatino Linotype", "Book Antiqua", "URW Palladio L", serif; height: 80vh; } #map_table { border-spacing: 0px; padding: 0px; margin: 0px; border: 0px; width: 100%; background: #ddd; position: relative; z-index: 1; } #map_table td { padding: 0; } </style>
+<table id='map_table'>
+<tr> <td> <div id='map_canvas'></div>
+</td>
+<script type="text/javascript">
+var w = getWindowWidth(); var showVerticalAd = !isMobileUA && w > 800; if (showVerticalAd) { document.write('<td valign=top id="adsense" style="width:160px;background-color:#f0f0f0;"><ins  class="adsbygoogle" style="width:160px;display:block" data-ad-client="ca-pub-0281575029452656" data-ad-slot="2455076269" data-ad-format="auto"></ins>'); } </script>
+</tr>
+</table>
+
+<style type="text/css">
+
+@media only screen and (min-width: 800px) { .aqi-labels { padding-right: 160px; } } table.aqi-marker-labels td { font-size: 80%; } .aqi-labels { margin-top: -33px; height: 33px; position: relative; z-index: 888; overflow-x: scroll; font-family: "Noto Serif", Cambria, "Palatino Linotype", "Book Antiqua", "URW Palladio L", serif; } .aqi-labels-inner table {} .aqi-label { z-index: 2; border-radius: 3px; color: white; font-size: 12px; text-align: center; height: 28px; vertical-align: middle; padding: 0px; margin: 0px; } .aqi-label>div { padding: 1px 3px; margin: 0px; max-height: 30px; overflow: hidden; min-width: 100px; } .aqi-label>div::nth-line(n+1) { line-height: 1; } .aqi-label>div::nth-line(n+2) { font-size: 10px; } .aqi-label>div { font-size: 12px; line-height: 1.2; } @media only screen and (max-width: 800px) { .aqi-label>div { min-width: 60px; } } @media only screen and (max-width: 600px) { .aqi-label>div { line-height: 10px; min-width: 0px; } .aqi-label { min-width: 50px; } } @media only screen and (max-width: 500px) { .aqi-label>div { font-size: 10px; } } .aqi-label-title>div { max-width: 200px; } .aqi-label-title { font-size: 12px; color: black; background: rgba(255, 255, 255, .3); } .aqi-label-1 { background: rgb(0, 153, 102); background: rgba(0, 153, 102, .95); color: white; } .aqi-label-2 { background: rgb(255, 222, 51); background: rgba(255, 222, 51, .95); color: black; } .aqi-label-3 { background: rgb(255, 153, 51); background: rgba(255, 153, 51, .95); color: white; } .aqi-label-4 { background: rgb(204, 0, 51); background: rgba(204, 0, 51, .95); color: white; } .aqi-label-5 { background: rgb(102, 0, 153); background: rgba(102, 0, 153, .95); color: white; } .aqi-label-6 { background: rgb(126, 0, 35); background: rgba(126, 0, 35, .95); color: white; } .aqi-labels { pointer-events: none; display: flex; justify-content: center; } .aqi-labels .aqi-labels-inner table { pointer-events: all; } </style>
+
+<div class="aqi-labels">
+<div class="aqi-labels-inner">
+<table>
+<tr>
+<td class='aqi-label aqi-label-1'>
+<div id='aqi-tooltip-1'>Good</div>
+</td>
+<td class='aqi-label aqi-label-2'>
+<div id='aqi-tooltip-2'>Moderate</div>
+</td>
+<td class='aqi-label aqi-label-3'>
+<div id='aqi-tooltip-3'>Unhealthy for sensitive groups</div>
+</td>
+<td class='aqi-label aqi-label-4'>
+<div id='aqi-tooltip-4'>Unhealthy</div>
+</td>
+<td class='aqi-label aqi-label-5'>
+<div id='aqi-tooltip-5'>Very Unhealthy</div>
+</td>
+<td class='aqi-label aqi-label-6'>
+<div id='aqi-tooltip-6'>Hazardous</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript"> function useMobileUserVoice() { return true; } function _mapk() { return (function(){ var u = ""; decodeURIComponent("%603Z3F%5BWCyZGWpgIU9QTEKXYnukbB1%3ABztbGXhS%5Bx%3E%3E").split('').forEach(function(c){ u += String.fromCharCode(c.charCodeAt(0)-1); });return u; })(); } function _mcz() { return 8; } function _mmv() { return true; } function _mwb() { return true; } function _mtcm() { return "close map"; } function _mtfsv() { return "full screen view"; } function _mfsurl() { return 'https://waqi.info';}</script>
+<script type="text/javascript"> function adjustMapHeight(oheight, count) { var headTop = document.getElementById('header-top-mark').getBoundingClientRect().top; var mapTop = document.getElementById('map_table').getBoundingClientRect().top; var a = window.mapWindowHeightAdjust || (mapTop + 42 + 32 - headTop); var h = window.innerHeight; var height = h - a; if (showVerticalAd && height < 600) { height = 600; count = 10; } if (oheight != height) { log("adjusting map height to", height, "px (", oheight, "|", count, ")"); var o = document.getElementById('map_canvas'); if (height > 320) o.style.height = (height) + 'px'; var x = document.getElementById('map_table'); if (x) x.style.height = (height) + 'px'; } if (count < 10) setTimeout(function() { adjustMapHeight(h - a, count + 1) }, 100 * count); } try { adjustMapHeight(0, 0) } catch (e) { loge("adjustMapHeight error", e); } </script>
+<script> log("map shown after", Date.now() - waqiStartTime); nearestPromise2.then(function(data) { log("IP location known after", Date.now() - waqiStartTime, ":", data); if (data && data.location) { var title = getPageTitleInfo(); document.getElementById(title.id).innerHTML = title.txt.replace("__CITY__", data.g.city || data.g.country); fitLine('#' + title.id, .88, { maxfs: 38 }); } }); </script>
+<div class='whitebody'>
+<script>
+var waqi18n = {"texts":{"aqi-0-50":"Good","aqi-50-100":"Moderate","aqi-100-150":"Unhealthy for sensitive groups","aqi-150-200":"Unhealthy","aqi-200-300":"Very Unhealthy","aqi-300-500":"Hazardous","tooltip-aqi":"Air Quality Index","tooltip-more":"Click for more information","tooltip-updated":"updated %1","tooltip-nodata":"Sorry, no air quality data available"},"lang":"en"};</script><script>var aqiLevelImpacts = [["Air quality is considered satisfactory, and air pollution poses little or no risk","Good"],["Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.","Moderate"],["Members of sensitive groups may experience health effects. The general public is not likely to be affected.","Unhealthy for sensitive groups"],["Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects","Unhealthy"],["Health warnings of emergency conditions. The entire population is more likely to be affected.","Very Unhealthy"],["Health alert: everyone may experience more serious health effects","Hazardous"]];</script> <style type="text/css"> #geolocquery>div:hover { background: yelow; } #geolocquery>div { color: black; text-shadow: 0 1px 0 white; background: #fff; font-size: 18px; padding: 3px; border-bottom: 1px solid #888; border-top: 1px solid #888; text-align: center; } @media only screen and (max-width: 800px) { #geolocquery>div { padding: 10px; } #geolocquery { font-size: 15px; } .geoloc-confirm-button-block { display: block; } } </style> <div id='geolocquery' style='height:0;overflow: hidden;display: none;'>
+<div> <span click='libhere.getLocation();' style='cursor:pointer;'>Click here to refine your location using your browser geolocation information.</span>
+<span class='geoloc-confirm-button-block'> <a class='ntf-btn ntf-btn-more' href='javascript:libhere.getLocation();'>OK</a>
+<a class='ntf-btn ntf-btn-less' href='javascript:libhere.closeGeolocationQueryPopup();'>No thank you.</a>
+</span>
+</div>
+</div>
+<div style='font-size:18px;line-height:1.6;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;text-align:center;word-break: break-all;border: 1px solid #ddd;margin: 0px; padding: 5px 10px 10px 10px;;background: #f0f0f0;border-bottom:1px solid #ccc;'>
+<div style='margin:0;color:#888;'>Share: &ldquo;<span style='color:black'>How polluted is the air today? Check out the real-time air pollution map, for more than 100 countries.</span>&rdquo;
+</div>
+<div>
+<a href='https://aqicn.org/here/' style='font-size:80%;'>https://aqicn.org/here/</a></div>
+<div style='display:inline-block;vertical-align:middle;'>
+<div class="fb-like"  data-href="https://aqicn.org/here/"  data-width="" data-layout="button_count"  data-share="true" data-action="like"  data-size="large">
+</div>
+</div>
+<div style='margin-left:20px;display:inline-block;'><div class='ui-share-btns'><a id='share-facebook' href='https://www.facebook.com/dialog/share?app_id=643196515742584&display=popup&href=https%3A%2F%2Faqicn.org%2Fhere%2F&redirect_uri=https%3A%2F%2Faqicn.org%2Fhere%2F' class='ui-share-btn' title=''>
+<svg viewBox="0 0 24 24" width=24px height=24px xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+</a>
+<script>try{tlite.enable(document.getElementById('share-facebook'),{text:"<div style='font-size:120%'>Share on facebook:<\/div>How polluted is the air today? Check out the real-time air pollution map, for more than 100 countries.<br>(https:\/\/aqicn.org\/here\/)"});}catch(e){}</script>
+<a id='share-twitter' href='http://www.twitter.com/share?url=https%3A%2F%2Faqicn.org%2Fhere%2F' class='ui-share-btn' title=''>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width=24px height=24px viewBox="0 0 488 459" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,459.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none"><path d="M14 4579 c-2 -3 160 -224 359 -490 199 -266 622 -832 940 -1257 l578 -773 -37 -42 c-21 -23 -446 -482 -944 -1020 -498 -539 -907 -983 -908 -988 -2 -5 85 -9 210 -8 l213 1 70 77 c39 42 401 433 805 870 404 437 746 807 760 823 l25 29 200 -268 c110 -147 413 -553 673 -901 l474 -632 725 0 c603 0 724 2 720 13 -3 8 -187 256 -409 553 -222 296 -476 636 -564 754 -89 118 -350 469 -582 778 -232 310 -422 568 -422 572 0 7 1226 1338 1643 1783 l119 127 -219 0 -218 -1 -255 -276 c-140 -152 -483 -524 -763 -825 l-507 -548 -615 822 -616 823 -725 5 c-399 3 -728 2 -730 -1z m1718 -886 c237 -318 603 -807 813 -1088 210 -280 676 -904 1036 -1385 360 -482 658 -881 663 -888 6 -9 -65 -12 -324 -12 l-331 0 -656 878 c-1514 2023 -2278 3045 -2287 3060 -6 9 62 12 323 12 l331 0 432 -577z"/>
+</g>
+</svg>
+</a>
+
+<script>try{tlite.enable(document.getElementById('share-twitter'),{text:"<div style='font-size:120%'>Share on twitter:<\/div>How polluted is the air today? Check out the real-time air pollution map, for more than 100 countries.<br>(https:\/\/aqicn.org\/here\/)"});}catch(e){}</script>
+<a id='share-reddit' href='https://reddit.com/submit?url=https%3A%2F%2Faqicn.org%2Fhere%2F&title=How+polluted+is+the+air+today%3F+Check+out+the+real-time+air+pollution+map%2C+for+more+than+100+countries.' class='ui-share-btn' title=''>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width=24px height=24px version="1.1" viewBox="0 0 256 256" xml:space="preserve">
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" ><circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+<path d="M 75.011 45 c -0.134 -3.624 -3.177 -6.454 -6.812 -6.331 c -1.611 0.056 -3.143 0.716 -4.306 1.823 c -5.123 -3.49 -11.141 -5.403 -17.327 -5.537 l 2.919 -14.038 l 9.631 2.025 c 0.268 2.472 2.483 4.262 4.955 3.993 c 2.472 -0.268 4.262 -2.483 3.993 -4.955 s -2.483 -4.262 -4.955 -3.993 c -1.421 0.145 -2.696 0.973 -3.4 2.204 L 48.68 17.987 c -0.749 -0.168 -1.499 0.302 -1.667 1.063 c 0 0.011 0 0.011 0 0.022 l -3.322 15.615 c -6.264 0.101 -12.36 2.025 -17.55 5.537 c -2.64 -2.483 -6.801 -2.36 -9.284 0.291 c -2.483 2.64 -2.36 6.801 0.291 9.284 c 0.515 0.481 1.107 0.895 1.767 1.186 c -0.045 0.66 -0.045 1.32 0 1.98 c 0 10.078 11.745 18.277 26.23 18.277 c 14.485 0 26.23 -8.188 26.23 -18.277 c 0.045 -0.66 0.045 -1.32 0 -1.98 C 73.635 49.855 75.056 47.528 75.011 45 z M 30.011 49.508 c 0 -2.483 2.025 -4.508 4.508 -4.508 c 2.483 0 4.508 2.025 4.508 4.508 s -2.025 4.508 -4.508 4.508 C 32.025 53.993 30.011 51.991 30.011 49.508 z M 56.152 62.058 v -0.179 c -3.199 2.405 -7.114 3.635 -11.119 3.468 c -4.005 0.168 -7.919 -1.063 -11.119 -3.468 c -0.425 -0.515 -0.347 -1.286 0.168 -1.711 c 0.447 -0.369 1.085 -0.369 1.544 0 c 2.707 1.98 6.007 2.987 9.362 2.83 c 3.356 0.179 6.667 -0.783 9.407 -2.74 c 0.492 -0.481 1.297 -0.47 1.779 0.022 C 56.655 60.772 56.644 61.577 56.152 62.058 z M 55.537 54.34 c -0.078 0 -0.145 0 -0.224 0 l 0.034 -0.168 c -2.483 0 -4.508 -2.025 -4.508 -4.508 s 2.025 -4.508 4.508 -4.508 s 4.508 2.025 4.508 4.508 C 59.955 52.148 58.02 54.239 55.537 54.34 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #25a1de; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</svg>
+</a>
+
+<script>try{tlite.enable(document.getElementById('share-reddit'),{text:"<div style='font-size:120%'>Share on reddit:<\/div>How polluted is the air today? Check out the real-time air pollution map, for more than 100 countries.<br>(https:\/\/aqicn.org\/here\/)"});}catch(e){}</script></div>
+<style>.ui-share-btns { display: block; margin: 0; vertical-align: middle; } .ui-share-btns svg { height: 20px; vertical-align: middle; fill: white; } .ui-share-btn { background-color: #25a1de; color: rgba(255, 255, 255, .8); font-size: 15px; line-height: 20px; display: inline-block; text-align: center; border: 1px solid #0086c8; cursor: pointer; border-radius: 4px; padding: 3px 5px; margin: 3px; max-width: 800px; min-width: 30px; } .ui-share-btn:first-child { margin-left: 0px; } .ui-share-btn:hover { background-color: #f8f8f8; border-color: #adadad; text-decoration: none; color: black; } .ui-share-btn:hover svg { fill: black; } .ui-share-btn:hover svg g { fill: black; } .ui-share-btn a:hover { text-decoration: none; }</style>
+</div>
+</div>
+</div>
+<center>
+<div class='section-content' style=' font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif; font-size:120%;'><center>
+<div><ins class="adsbygoogle" style="display:block;margin: 10px auto; float: none; display: block; text-align:center;" data-ad-client="ca-pub-0281575029452656" data-ad-slot="2455076269" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></center><script>function ntfConf() { return {page:"here", divId:"ntf-body-first"} }</script><div id='ntf-body-first' style='display:none;font-size:20px;'></div><center>Translation for other languages:
+<span id="gtrans-div-id"></span>
+</center>
+<center>
+
+</center>
+</div>
+</center>
+</div>
+<div id='current-aqidata-block'><div class='h1section h1section-divider'>
+<div class='h1section-rainbow'>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<h1><div id='h1header2' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Air Quality Index (AQI) Values</div></h1></div>
+<script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header2',.88,{maxfs:45}); }; </script>
+<style> .section-outer { text-align: initial; } .section-content { max-width: 95%; width: 1100px; font-size: 18px; min-height: 300px; text-align: initial; margin-top: 10px; margin-bottom: 10px; line-height: 1.8; margin-left: auto; margin-right: auto; } .section-content-tight { min-height: 0px; } .section-content-alt { background-color: #f0f0f0; border-top: 1px solid #ccc; border-bottom: 1px solid #ddd } ; .section-banner { background-size: 100%; background: url(https://aqicn.org/images//bluesky-banner-panoramic.jpg) no-repeat center bottom #eee; margin-top: -2px; z-index: -1; border-bottom: 1px solid #888; width: 100%; } .h2-title { font-family: inherit; font-size: 1.1em; overflow: hidden; text-align: center; text-transform: capitalize; } .h2-title:before, .h2-title:after { background-color: #ddd; content: ''; display: inline-block; height: 1px; position: relative; vertical-align: middle; width: 50%; } .h2-title:before { right: 0.5em; margin-left: -50%; } .h2-title:after { left: 0.5em; margin-right: -50%; } @media only screen and (max-width: 800px) { .section-content { line-height: 1.6; max-width: 98%; min-height: 10px; } .section-banner { display: none; } } </style>
+
+<div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'><div class='section-outer'>
+<div class='section-content' >
+<style type="text/css">
+
+@media only screen and (max-width: 1000px)
+{  .aqiwidget-table-x { display: inline-block; } .aqiwidget  { border-radius:0px; border: 1px solid #ccc; -moz-border-radius:0px; -webkit-border-radius:0px; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; text-align: center; } }
+@media only screen and (max-width: 500px)
+{ .aqiwidget-table-container-x { display:inline-block;text-align: center;} .aqiwgt-table-aqicell { width: 33%;} .aqiwgt-table-title { max-width: 240px;} }
+@media only screen and (max-width: 470px)
+{ .aqiwidget-table-x {width:100%!important;}  }
+@media only screen and (max-width: 800px)
+{ .aqi-graph-img { x-width: 600px!important;} }
+@media only screen and (max-width: 768px)
+{ .aqi-graph-img { x-width: 568px!important;} }
+@media only screen and (max-width: 600px)
+{ .aqi-graph-img { x-width: 400px!important;}
+.aqivalue { font-size: 38px!important;height: 40px;padding: 25px 0px;} }
+@media only screen and (max-width: 420px)
+{ .aqi-graph-img { width: 230px!important;}  }
+@media only screen and (max-width: 400px)
+{ .aqi-graph-img { width: 215px!important;}
+.aqivalue { font-size: 28px!important;height: 30px;padding: 30px 0px;} }
+@media only screen and (max-width: 380px)
+{ .aqi-graph-img { width: 230px!important;} .tdmin {display:none;}  }
+@media only screen and (max-width: 360px) { .aqi-graph-img { width: 230px!important;}
+.tditem { display:inline-block;max-width: 30px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}}
+@media only screen and (max-width: 320px)
+{ .aqi-graph-img { width: 220px!important;} .tdmax { display:none; }}
+</style>
+<div id='map-main-station' style='cursor:pointer;'></div>
+</div>
+</div>
+</div>
+</div>
+<div style='background-color:white;'>
+
+<div id='city-forecast' style='display:none;'>
+<div class='h1section h1section-divider'><div class='h1section-rainbow'><div>
+</div><div>
+</div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<h1><div id='h1header3' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Air Quality Forecast</div></h1></div>
+<script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header3',.88,{maxfs:45}); }; </script>
+<div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'><div class='section-outer'><div class='section-content' ><center><div id='forecast-cityinfo'></div>
+</center></div>
+</div></div></div>
+<div class='h1section h1section-divider'><div class='h1section-rainbow'><div></div><div></div><div></div><div></div><div></div></div><h1><div id='h1header4' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Looking for another city?</div></h1></div><script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header4',.88,{maxfs:45}); }; </script><div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'><div class='section-outer'><div class='section-content' ><div style='text-align:center'> <div class='view-search'> <div style='color:#444;margin-top:50px;'> <div id='search-tile' style='display:inline-block'> Enter a city name </div> <div style='font-size:20px;'> &darr; &darr; &darr; </div> <link rel='stylesheet' type='text/css' href='https://aqicn.org/air-cache/city/style.min.css?_=20190418.093127' /> <style type="text/css"> #searchInputBox-loading svg,#searchInputBox-magnifier svg {  width: 32px; height: 32px; } .full-page-search { box-sizing: border-box; max-width:880px; width:100%; } </style> <center> <table class='full-page-search'> <tr> <td style='100%;'> <input value='' id='full-page-search-input' > </td> <td style='width:50px;'> <div style='width:50px;'><center> <span id='searchInputBox-loading' style='display:none'></span> <span id='searchInputBox-magnifier' style='padding:5px;'></span> </div> </td> </tr> <tr> <td colspan=2> <div id='searchResults' style='display:none;background:white;margin:0'></div> </td> </tr> </table> </center> <script type="text/javascript"> try { aqisearch.init({"type":"main-search","i18n":{"error_nearest":"Sorry, an error happened","geolocating":"Please wait while querying your location..."},"search":{"type":"world"}}) } catch (e) { loge("initSearch",e); } </script> <link href='/air/view/images/isprites/map-flags/2016-08-27/ispritflags.css?_=20190418.093129&type=css' rel='stylesheet'/> </div> <style type="text/css"> .searchBtnGeneric { color: #0086c8; text-shadow: 1px 1px 1px white; background: #f8f8f8; max-width:880px; width:calc(100% - 20px); text-align:center; border: 1px solid #ccc; line-height: 1.42857143; cursor: pointer; border-radius: 4px; min-height:42px; margin: 10px 0px; box-sizing:border-box; } .searchBtnGeneric table { color: inherit; } .searchBtnGeneric:hover{ background-color: #e6e6e6; border-color: #444444; text-transform: none; } .searchBtnAutolocate { margin-top:30px; } #geolocation-query-wait > div { position: fixed; width: 100%; height: 100%; top: 0;left: 0; background: rgba(0,0,0,.8); z-index:1000; vertical-align: middle; display: table; } @media only screen and (min-width: 500px) { .searchBtnGenericHalf { display: auto; display:inline-block; box-sizing: border-box; width: calc(50% - 10px); margin:5px; } } @media only screen and (min-width: 800px) { .searchBtnGenericHalf { width: calc(33% - 10px); } } .searchBtnGenericName { font-size:18px; max-height: 26px; overflow-y: hidden; word-break: break-all; text-overflow: ellipsis; } </style> <div id='search-previous-stations'> <div style='color:#888;margin:20px 0;font-size:80%;'> Previously visited stations: </div> </div> <script> "use strict"; function showSearchPreviousStations(divId) { function ld(u) { location.href = u; } function update(feed, node) { if (!feed.city) return; var html = ""; html += "<center><table><tr><td style='font-size: 200%;width: 80px;text-align: center;'>" + feed.aqi + "</td>"; html += "<td>"; html += "<div class='searchBtnGenericName'>" + feed.city.name + "</div>"; var time = feed.time.s; if (window.moment && feed.time.iso) { time = moment(feed.time.iso).fromNow(); } else if (feed.time.iso) { time = new Date(feed.time.iso).toLocaleString(); } html += "<div style='font-size:80%;'>" + time + "</div>"; html += "</table></center>"; node.innerHTML = html; node.style.backgroundColor = aqiSmoothColor(feed.aqi, "b"); node.style.color = aqiSmoothColor(feed.aqi, "f"); node.style.textShadow = aqiSmoothColor(feed.aqi, "s") + " 1px 0px 1px"; } function getStations() { var l = []; try { var l1 = JSON.parse(Cookies.get("waqi-w-history")) || []; var l2 = JSON.parse(Cookies.get("waqi-wx-history")) || []; l = l1.concat(l2); l = l.sort(function(a,b){return a.time<b.time?1:-1}); } catch (e) {} return l; } var w = window; w.onMomentLoaded = w.onMomentLoaded || []; try { var body = document.getElementById(divId); var count = 0; getStations().forEach(function (o, i) { if (count >= 9) return; if (typeof aqiStation != "undefined" && i == 0) return; if (!o.idx) return; var node = document.createElement("div"); body.appendChild(node); node.classList.add("searchBtnGeneric", "searchBtnGenericHalf"); node.onclick = function () { ld(o.url); }; node.innerHTML = "<div style='line-height:56px;max-height:56px;overflow:hidden;'>" + o.name + "</div>"; w.onMomentLoaded.push(function () { aqisrv .now(o.idx) .then(function (feed) { update(feed, node); }) .catch(function (e) { hit && hit.error("main:nowaqi", { error: e, idx: o.idx }); }); }); count++; }); if (count == 0) body.innerHTML = ""; } catch (e) { hit && hit.error("main:nowaqi", { error: e }); } } showSearchPreviousStations("search-previous-stations"); </script> </div> <br> <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-0281575029452656" data-ad-slot="2455076269" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> <br></div></div></div></div><div class='h1section h1section-divider'><div class='h1section-rainbow'><div></div><div></div><div></div><div></div><div></div></div><h1><div id='h1header5' style='padding:2px;padding:5px 0;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;;'><span>Measure the air quality in your neighborhood</span></div><div id='h1header6' class='h1sub'>
+<span>Participate with your own air quality monitoring station</span>
+</div>
+</h1>
+</div>
+<script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header5',.88,{maxfs:45});fitLine('#h1header6',.88,{maxfs:38}); }; </script>
+<div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'>
+<div class='section-outer'><div class='section-content' > <style> .gaia-fluid-left { float: left; width: 50%; } .gaia-fluid-right { float: right; width: 50%; margin-top: 10px; }
+
+@media only screen and (max-width: 800px) { .gaia-fluid-left { width: 100%; box-sizing: border-box; } .gaia-fluid-right { width: 100%; border: none; margin-top: 20px; } } .gaia-product { box-shadow: 0px 0px 3px rgba(0, 0, 0, .20); display: inline-block; margin: 5px; background: #f8f8f8; line-height: 1.2; border: 1px solid #f8f8f8; max-width: 420px; width: 90%; } .gaia-product:hover { border: 1px solid #888; } </style> <div class='gaia-fluid-left'> <p> The GAIA air quality monitor uses laser particle sensors to measure in real-time  PM2.5 and PM10 particle pollution, which is one of the most harmful air pollutants. </p> <p> It is very easy to set up: It only requires a WIFI access point and a USB compatible power supply.  Once connected, your real time air pollution levels are instantaneously available in on our maps. </p>
+<p> The station comes together with 10-meter water-proof power cables, a power supply, mounting equipment and an optional solar panel. </p>
+</div>
+<div class='gaia-fluid-right'>
+<center>
+<a href='/gaia/list/'>
+<div> <img src='/air/view/gaia/images/gaia-a12-package.jpg' style='width:100%'  title='GAIA A12 Air Quality Monitoring Station'> </div>
+<p> Do you want to know more? Click for more info. </p>
+</a>
+</center>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<div class='h1section h1section-divider'><div class='h1section-rainbow'>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<h1>
+<div id='h1header7' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Nearest cities:</div></h1></div>
+<script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header7',.88,{maxfs:45}); }; </script><div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'>
+<div class='section-outer'><div class='section-content' ><div id='map-nearest-stations' style='text-align:left;'></div></div></div></div>
+<div class='h1section h1section-divider'><div class='h1section-rainbow'><div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<h1><div id='h1header8' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Air Quality Rankings</div></h1></div>
+<script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header8',.88,{maxfs:45}); }; </script>
+<div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'>
+<div class='section-outer'><div class='section-content' >
+<script>var i18nTexts=(i18nTexts||[]);i18nTexts.push([])</script>
+<script type='text/javascript'>/*webapp:ranking-dyn.8b88bfa7d6610655e841*/var ranking;!function(){"use strict";var n,t,e={},r={};function i(n){var t=r[n];if(void 0!==t)return t.exports;var o=r[n]={id:n,exports:{}};return e[n].call(o.exports,o,o.exports,i),o.exports}i.m=e,i.n=function(n){var t=n&&n.__esModule?function(){return n.default}:function(){return n};return i.d(t,{a:t}),t},i.d=function(n,t){for(var e in t)i.o(t,e)&&!i.o(n,e)&&Object.defineProperty(n,e,{enumerable:!0,get:t[e]})},i.f={},i.e=function(n){return Promise.all(Object.keys(i.f).reduce((function(t,e){return i.f[e](n,t),t}),[]))},i.u=function(n){return n+"-dyn.c1699762ca955bb59d4c.js"},i.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(n){if("object"==typeof window)return window}}(),i.o=function(n,t){return Object.prototype.hasOwnProperty.call(n,t)},n={},t="ranking:",i.l=function(e,r,o,a){if(n[e])n[e].push(r);else{var u,c;if(void 0!==o)for(var s=document.getElementsByTagName("script"),d=0;d<s.length;d++){var l=s[d];if(l.getAttribute("src")==e||l.getAttribute("data-webpack")==t+o){u=l;break}}u||(c=!0,(u=document.createElement("script")).charset="utf-8",u.timeout=120,i.nc&&u.setAttribute("nonce",i.nc),u.setAttribute("data-webpack",t+o),u.src=e),n[e]=[r];var f=function(t,r){u.onerror=u.onload=null,clearTimeout(v);var i=n[e];if(delete n[e],u.parentNode&&u.parentNode.removeChild(u),i&&i.forEach((function(n){return n(r)})),t)return t(r)},v=setTimeout(f.bind(null,void 0,{type:"timeout",target:u}),12e4);u.onerror=f.bind(null,u.onerror),u.onload=f.bind(null,u.onload),c&&document.head.appendChild(u)}},i.r=function(n){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(n,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(n,"__esModule",{value:!0})},i.p="/webapp/dist/",function(){var n={ranking:0};i.f.j=function(t,e){var r=i.o(n,t)?n[t]:void 0;if(0!==r)if(r)e.push(r[2]);else{var o=new Promise((function(e,i){r=n[t]=[e,i]}));e.push(r[2]=o);var a=i.p+i.u(t),u=new Error;i.l(a,(function(e){if(i.o(n,t)&&(0!==(r=n[t])&&(n[t]=void 0),r)){var o=e&&("load"===e.type?"missing":e.type),a=e&&e.target&&e.target.src;u.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",u.name="ChunkLoadError",u.type=o,u.request=a,r[1](u)}}),"chunk-"+t,t)}};var t=function(t,e){var r,o,a=e[0],u=e[1],c=e[2],s=0;if(a.some((function(t){return 0!==n[t]}))){for(r in u)i.o(u,r)&&(i.m[r]=u[r]);c&&c(i)}for(t&&t(e);s<a.length;s++)o=a[s],i.o(n,o)&&n[o]&&n[o][0](),n[o]=0},e=self.webpackChunkranking=self.webpackChunkranking||[];e.forEach(t.bind(null,0)),e.push=t.bind(null,e.push.bind(e))}();var o={};i.r(o),function(n){n||(n="ranking-"+Date.now(),document.write("<div id='"+n+"'></div>"));var t=document.getElementById(n);!function(n,t){var e=!1;n.innerHTML='<center><div class="aqspinner3"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div></div></center>',new IntersectionObserver((function(r){r.forEach((function(r){!e&&r.intersectionRatio>0&&(e=!0,t().catch((function(t){n.innerHTML="<center>Ooops... Sorry, something wrong happended<br><br><small>".concat(t,"</small></center>")})))}))}))
+.observe(n)}(t,(function(){return i.e("ranking-module").then(i.bind(i,4538)).then((function(n){n.showRanking?n.showRanking(t):t.innerHTML="\n\t\t\t\t\t<center>\n\t\t\t\t\t\tPlease visit <a href='https://aqicn.org/rankings/'>aqicn.org/rankings/</a> for the latest Air Quality rankings\n\t\t\t\t\t</center>\n\t\t\t\t\t"}))}))}(),ranking=o}();</script></div></div></div>
+<div class='h1section h1section-divider'>
+<div class='h1section-rainbow'><div></div><div></div><div></div><div></div><div></div></div>
+<h1><div id='h1header9' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Download the real-time Air Quality Index Widget for:</div></h1></div>
+<script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header9',.88,{maxfs:45}); }; </script><div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'>
+<div class='section-outer'><div class='section-content' ><center style='overflow:hidden;max-width:100%;'> <style> .widget-platforms .widget-platform:hover { background: #eee; } .widget-platforms .widget-platform { cursor: pointer;; display: inline-block; border: 1px solid #ccc; margin: 10px; padding: 10px; min-width: 120px; } .widget-platforms img { width: 180px; } @media only screen and (max-width: 500px) { .widget-platforms img { width: 150px; } } @media only screen and (max-width: 400px) { .widget-platforms img { width: 130px; } }
+
+
+@media only screen and (max-width: 360px) { .widget-platforms img { width: 120px; } } </style>
+
+<br><div class='widget-platforms'><div class='widget-platform' id='ios-widget' onclick='showIOsWidget()' style='display:none'>iPhone & iPad<br><img class='async-img' data-src='https://aqicn.org/images-static/isprites/wgt-platforms/iphone.png''></div><div class='widget-platform' id='android-widget' onclick='showAndroidWidget()' style=''>Android<br><img class='async-img' data-src='https://aqicn.org/images-static/isprites/wgt-platforms/android.png''></div>
+<div class='widget-platform' id='chrome-widget' onclick='showChromeWidget()' style=''>Google Chrome<br><img class='async-img' data-src='https://aqicn.org/images-static/isprites/wgt-platforms/chrome.png''></div>
+<div class='widget-platform' id='firefox-widget' onclick='showFirefoxWidget()' style=''>Firefox<br><img class='async-img' data-src='https://aqicn.org/images-static/isprites/wgt-platforms/firefox.png''></div><div class='widget-platform' id='wordpress-widget' onclick='showWordpressWidget()' style='display:none'>Wordpress<br><img class='async-img' data-src='https://aqicn.org/images-static/isprites/wgt-platforms/wordpress.png''></div><div class='widget-platform' id='api-widget' onclick='window.location="/api/"' style=''>Cloud API<br><img class='async-img' data-src='https://aqicn.org/images-static/isprites/wgt-platforms/cloudapi.png''></div></div> <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-0281575029452656" data-ad-slot="2455076269" data-ad-format="auto"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> <br> <br> <script  src='/jscripts/qrcode.min.js?_=20190418.093124&type=script'></script> <script type="text/javascript"> function setQrcode(node,url) { new QRCode(node, { text:url, width: 100, height: 100, }); } var wordpressWidgetUrl; function setWidgetDownloadUrls( obs ) { if (!obs) return; var idx = obs.x; var city = obs.nlo+(obs.nna?(" ("+obs.nna+")"):""); document.getElementsByClass("cityname").forEach(function(node){ node.innerHTML = city; }); var iosUrl = "http://ios.aqicn.org/?"+obs.x; document.getElementById("iosurl").href=iosUrl; document.getElementById("iosurltxt").innerHTML=iosUrl; setQrcode("iosurlqr",iosUrl); wordpressWidgetUrl = "/widgets/wordpress/@"+obs.x; setQrcode("androidqr",document.getElementById("androidurl").href); setQrcode("android-apkqr",document.getElementById("android-apkurl").href); document.getElementById("wordpress-widget").style.display="inline-block"; document.getElementById("ios-widget").style.display="inline-block"; } function showGenericWidget(divID) { var modal = new tingle.modal({ footer: false, closeMethods: ['overlay', 'button', 'escape'], closeLabel: "Close", cssClass: ["tingle-share-modal"], }); var content = document.getElementById(divID).innerHTML; content = content.replace(/data-src/g,"src"); modal.setContent(content); modal.open(); } </script> <script type="text/javascript"> function showWordpressWidget(  ) { window.location = wordpressWidgetUrl; } </script> <script type="text/javascript"> function showChromeWidget(  ) { new TinySlider("chromebanner",3); showGenericWidget("chromewidgetdiv"); } function TinySlider(elt,l) { var count = 0; var _show = function(idx) { for (var i=0;i<l;i++) { try { document.getElementById(elt+i).style.display = (i==idx)?'':'none';  } catch (e) {} } idx ++; if (idx==l) idx = 0; if (count++<30) setTimeout(function(){_show(idx);},2000); }; _show(0); } </script> <div style='display:none;'><div id='chromewidgetdiv' style='font-size:15px; width:750px;'>
+
+<br>
+<center>
+<a style='color:black;' target='_' id='igoogleurl' href=''> <span style='font-size:22px'> Click here to download the <span class="cityname">CITYNAME</span>
+Air Quality plugin from the Chrome store. </span>
+<br>
+<br>
+<small></small>
+</a>
+<br><br>
+<a style='color:black;' target='_' id='igoogleurl' href=''>
+<div id="chromebanner" >
+<img id='chromebanner0' class='async-img' data-src='https://aqicn.org/images-static/screenshots/aqicn.chrome.plugin.0.png' width=600 alt='Chrome plugin' style='border:1px solid black;'>
+<img id='chromebanner1' class='async-img' data-src='https://aqicn.org/images-static/screenshots/aqicn.chrome.plugin.1.png' width=600 alt='Chrome plugin' style='border:1px solid black;'>
+<img id='chromebanner2' class='async-img' data-src='https://aqicn.org/images-static/screenshots/aqicn.chrome.plugin.2.png' width=600 alt='Chrome plugin' style='border:1px solid black;'>
+</div> </a>
+<br><br>
+Alternatively, in can you can not access the Chrome store, you can also download the "<b>.crx</b>" plugin file<br> <a href=''>from this link</a>.
+In order to install the crx file by, you can follow those 3 steps: <br> <br> <small> <li><strong>Settings-Icon</strong>
+&gt;
+<strong>Tools</strong> &gt;
+<strong>Extensions</strong>
+<br> <i>{ the 'three horizontal-bars' icon in the top-right corner }</i>
+<br> <li><strong>Drag and drop</strong>
+the "<strong>crx</strong>"
+extension file onto the <em>Extensions</em>
+page from <strong>step 1</strong>  <br><i>{ .crx file should likely be in your <em>Downloads</em> directory }</i>
+<br> <li><strong>Install</strong> the aqicn Air Quality plugin </li>
+<br> (More information from  <a href='http://www.howtogeek.com/120743/how-to-install-extensions-from-outside-the-chrome-web-store/'>
+howtogeek.com/120743/how-to-install-extensions-from-outside-the-chrome-web-store/</a>
+or <br> <a href='http://stackoverflow.com/questions/9931906/crx-file-install-in-chrome' target=_> stackoverflow.com/questions/9931906/crx-file-install-in-chrome</a>
+</small> )
+</center>
+</div></div>
+<script type="text/javascript"> function showFirefoxWidget() { new TinySlider("firefoxbanner",2); showGenericWidget("firefoxwidgetdiv"); } </script>
+<div style='display:none;'><div id='firefoxwidgetdiv' style='font-size:15px; width:750px;'> <br> <center> <a style='color:black;' target='_' id='igoogleurl' href=''>
+<span style='font-size:22px'> Click here to download the <span class="cityname">CITYNAME</span>
+Air Quality plugin from the Firefox store. </span>
+<br> <br> <small></small> </a>
+<br><br>
+<a style='color:black;' target='_' id='igoogleurl' href=''> <div id="firefoxbanner" > <img id='firefoxbanner0' class='async-img' data-src='https://aqicn.org/images-static/screenshots/aqicn.firefox.plugin.0.png' width=600 alt='Chrome plugin' style='border:1px solid black;'> <img id='firefoxbanner1'class='async-img' data-src='https://aqicn.org/images-static/screenshots/aqicn.firefox.plugin.1.png' width=600 alt='Chrome plugin' style='border:1px solid black;'> </div> </a> <br><br> In case you can not access the Firefox store, you can also download the "<b>.xpi</b>" add-on  <a href=''>from this link</a>.  </center> </div></div> <script type="text/javascript" charset="utf-8"> function showIOsWidget(  ) { showGenericWidget("iosiwdgetdiv"); } </script> <div style='display:none;'><div id='iosiwdgetdiv' style='font-size:18px; width:628px;'> <img class='async-img' data-src='https://aqicn.org/images-static/iphone6.jpg' style='float:left;padding:10px;' alt="iphone real-time air quality webapp"> <div style='border:0px solid black; height:50px;'></div> <div style='border:0px solid black; height:300px;text-align:left;'> In order to install the <b><span class="cityname">CITYNAME</span></b> Air Quality Widget on your favorite iPhone or iPod device,  just launch the internet browser from your device and open the web page:  "<b><a href='' id='iosurl'><span id='iosurltxt'> </span></a></b>". <br> <br> <center> Or just scan this QR-code:<br> <div id='iosurlqr'></div> </center> </div> <div style='border:0px solid black; height:100px;text-align:left;'> Then click on this icon to install the widget as an application directly accessible from your iPhone homescreen. </div> </div></div> <script type="text/javascript" charset="utf-8"> function showAndroidWidget(  ) { showGenericWidget("androidwidgetdiv"); } </script> <div style='display:none;'><div id='androidwidgetdiv' style='font-size:18px; width:688px;'> <img class='async-img' data-src='https://aqicn.org/images-static/Android.jpg' style='float:left;' alt="android real-time air quality widget and application"> <div style='border:0px solid black; text-align:left;padding-top:10px;'> You can download the <b><span class="cityname">CITYNAME</span> Air Quality Widget</b> on your Android Device directly from  <a id='androidurl' href=''  target="_android"> the google app store.</a> <br> (你可以从<a id='androidurl' href=''  target="_android">Google商店</a>下载此应用). <center> <div id='androidqr'></div> </center> <br> In case the Android app store can not be accessed, you can also directly download the  signed <a href='https://aqicn.org/?apk'><b>apk file</b></a>.  <br> (如果不能访问 Google应用商店，你也可以从我们的网站上直接下载<a id='android-apkurl' href='https://aqicn.org/?apk'>APK文件</a>) <center> <div id='android-apkqr'></div> </center> </div> </div></div> </center></div></div></div><div id='historic-aqidata-block' style='display:block;'><div class='h1section h1section-divider'><div class='h1section-rainbow'><div></div><div></div><div></div><div></div><div></div></div><h1><div id='h1header10' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>Air quality historical data</div></h1></div><script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header10',.88,{maxfs:45}); }; </script><div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'><div class='section-outer'><div class='section-content' ><div id='historic-aqidata-inner'></div></div></div></div></div><script>function stationAqiHistoric() { return {"preload":true,"view":"monthly","div":{"block":"historic-aqidata-block","inner":"historic-aqidata-inner"}}; } </script><script>var i18nTexts=(i18nTexts||[]);i18nTexts.push([])</script><script type='text/javascript'>/*webapp:historic-dyn.627bf92477894868fe5a*/var historic;!function(){"use strict";var t,e,n={},r={};function o(t){var e=r[t];if(void 0!==e)return e.exports;var i=r[t]={id:t,loaded:!1,exports:{}};return n[t].call(i.exports,i,i.exports,o),i.loaded=!0,i.exports}o.m=n,o.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return o.d(e,{a:e}),e},o.d=function(t,e){for(var n in e)o.o(e,n)&&!o.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},o.f={},o.e=function(t){return Promise.all(Object.keys(o.f).reduce((function(e,n){return o.f[n](t,e),e}),[]))},o.u=function(t){return t+"-dyn.73b6b73501ef5a4a8145.js"},o.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),o.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},t={},e="historic:",o.l=function(n,r,i,c){if(t[n])t[n].push(r);else{var a,u;if(void 0!==i)for(var s=document.getElementsByTagName("script"),d=0;d<s.length;d++){var l=s[d];if(l.getAttribute("src")==n||l.getAttribute("data-webpack")==e+i){a=l;break}}a||(u=!0,(a=document.createElement("script")).charset="utf-8",a.timeout=120,o.nc&&a.setAttribute("nonce",o.nc),a.setAttribute("data-webpack",e+i),a.src=n),t[n]=[r];var f=function(e,r){a.onerror=a.onload=null,clearTimeout(v);var o=t[n];if(delete t[n],a.parentNode&&a.parentNode.removeChild(a),o&&o.forEach((function(t){return t(r)})),e)return e(r)},v=setTimeout(f.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=f.bind(null,a.onerror),a.onload=f.bind(null,a.onload),u&&document.head.appendChild(a)}},o.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},o.nmd=function(t){return t.paths=[],t.children||(t.children=[]),t},o.p="/webapp/dist/",function(){var t={historic:0};o.f.j=function(e,n){var r=o.o(t,e)?t[e]:void 0;if(0!==r)if(r)n.push(r[2]);else{var i=new Promise((function(n,o){r=t[e]=[n,o]}));n.push(r[2]=i);var c=o.p+o.u(e),a=new Error;o.l(c,(function(n){if(o.o(t,e)&&(0!==(r=t[e])&&(t[e]=void 0),r)){var i=n&&("load"===n.type?"missing":n.type),c=n&&n.target&&n.target.src;a.message="Loading chunk "+e+" failed.\n("+i+": "+c+")",a.name="ChunkLoadError",a.type=i,a.request=c,r[1](a)}}),"chunk-"+e,e)}};var e=function(e,n){var r,i,c=n[0],a=n[1],u=n[2],s=0;if(c.some((function(e){return 0!==t[e]}))){for(r in a)o.o(a,r)&&(o.m[r]=a[r]);u&&u(o)}for(e&&e(n);s<c.length;s++)i=c[s],o.o(t,i)&&t[i]&&t[i][0](),t[i]=0},n=self.webpackChunkhistoric=self.webpackChunkhistoric||[];n.forEach(e.bind(null,0)),n.push=e.bind(null,n.push.bind(n))}();var i={};o.r(i);var c=function(){return c=Object.assign||function(t){for(var e,n=1,r=arguments.length;n<r;n++)for(var o in e=arguments[n])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},c.apply(this,arguments)};Object.create,Object.create;var a=window;function u(t){if(t.div.inner){var e=t.div.inner;t.div="string"==typeof e?document.getElementById(e):e}return o.e("historic-module").then(o.bind(o,730)).then((function(e){e.view(t)})).catch((function(e){t.div.innerHTML="\n\t\t\t<center>\n\t\t\t\tSorry, something went wrong. Please try reloading the page<br>".concat(e,"\n\t\t\t</center>\n\t\t\t"),console.error(e),console.log(t)}))}a.stationAqiHistoric&&function(){var t=a.stationAqiHistoric();a.stationAqiHistoric=function(){return t};var e,n,r,o=document.getElementById(t.div.inner);t.show=function(e){return u(c(c({},t),e))},t.preload?u(t):(n=function(){return u(t)},r=!1,(e=o).innerHTML='<center><div class="aqspinner3"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div></div></center>',new IntersectionObserver((function(t){t.forEach((function(t){!r&&t.intersectionRatio>0&&(r=!0,n().catch((function(t){e.innerHTML="<center>Ooops... Sorry, something wrong happended<br><br><small>".concat(t,"</small></center>")})))}))})).observe(e))}(),a.showAqiHistoric=function(t){return u(t)},historic=i}();</script><script  src='https://aqicn.org/air-cache/nearest/scripts/dist/here.js?_=20231228.141014' type='text/javascript'></script><script type="text/javascript" charset="utf-8"> function _mht() { return false; } aqi18n.register('WEB_NEAREST_GEOLOCATING',"Please wait while querying your location...");aqi18n.register('WP_AUTOLOCATE_TITLE',"Based on your IP address information (__IP__), <br> we have identified that your are located at <b>__CITY__<\/b>, <br> and that the 50 nearest stations are:<br>");aqi18n.register('CITY_AQIFORECAST_TITLE',"__CITY__ Air Quality Forecast");aqi18n.register('WEB_NEAREST_YOUAREHERE',"You are here!");aqi18n.register('WEB_NEAREST_ERROR',"Sorry, an error happened");var aqiLevelLabels = ["no data","Good","Moderate","<div style='line-height:1.1'>Unhealthy<br><span style='font-size:16px;'>for Sensitive Groups<\/span><\/div>","Unhealthy","<div style='line-height:1.1'><span style='font-size:16px;'>Very<\/span><br>Unhealthy<\/div>","Hazardous"];var aqiLevelImpacts = [["Air quality is considered satisfactory, and air pollution poses little or no risk","Good"],["Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.","Moderate"],["Members of sensitive groups may experience health effects. The general public is not likely to be affected.","Unhealthy for sensitive groups"],["Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects","Unhealthy"],["Health warnings of emergency conditions. The entire population is more likely to be affected.","Very Unhealthy"],["Health alert: everyone may experience more serious health effects","Hazardous"]]; try { libhere.init(); } catch (e) { loge("here:init", e) } function initPage() {} </script><a name="infoaqi"></a><div class='h1section h1section-divider'><div class='h1section-rainbow'><div></div><div></div><div></div><div></div><div></div></div><h1><div id='h1header11' style='padding:2px;font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;;'>About the Air Quality and Pollution Measurement:</div></h1></div><script type='text/javascript'>  ; if (!isMobileUA) { fitLine('#h1header11',.88,{maxfs:45}); }; </script><div class='whitebody' style='font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif;'><div class='section-outer'><div class='section-content' > <center>About the Air Quality Levels<br> <br> <style type="text/css"> #legend-full table.infoaqitable { line-height: 1.5; background-color: white; max-width: 1000px; width: 95%; margin: 0px; border: 1px solid black; cursor: pointer; } #legend-full table.infoaqitable td { padding: 5px; font-size: 15px; text-shadow: none; } #legend-full .aqiwtxt { color: #ffffff; } #legend-full .aqibtxt { color: #000000; } @media only screen and (max-width: 800px) { #legend-full table.infoaqitable { width: 98%; } } @media only screen and (max-width: 800px) { #legend-full table.infoaqitable td { display: block; } #legend-full table.infoaqitable td:nth-child(1) { display: inline-block; font-size: 1.2em; } #legend-full table.infoaqitable td:nth-child(2) { display: inline-block; font-weight: 800; font-size: 1.2em; } } </style> <div id='legend-full' onclick='window.location="/scale/"'> <table class="infoaqitable cautionary"> <thead> <tr> <td>AQI</td> <td>Air Pollution Level</td> <td>Health Implications</td> <td>Cautionary Statement (for PM2.5)</td> </tr> </thead> <tr style="background-color:#009966;"> <td class='aqiwtxt' nowrap="true">0 - 50</td> <td class='aqiwtxt'>Good</td> <td class='aqiwtxt'>Air quality is considered satisfactory, and air pollution poses little or no risk</td> <td class='aqiwtxt'>None</td> </tr> <tr style="background-color:#ffde33" class='aqibtxt'> <td class='aqibtxt' nowrap="true">51 -100</td> <td class='aqibtxt'>Moderate</td> <td class='aqibtxt'>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td> <td class='aqibtxt'>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td> </tr> <tr style="background-color:#ff9933;"> <td class='aqibtxt' nowrap="true">101-150</td> <td class='aqibtxt'>Unhealthy for Sensitive Groups</td> <td class='aqibtxt'>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td> <td class='aqibtxt'>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td> </tr> <tr style="background-color:#cc0033;"> <td class='aqiwtxt' nowrap="true">151-200</td> <td class='aqiwtxt'>Unhealthy</td> <td class='aqiwtxt'>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</td> <td class='aqiwtxt'>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td> </tr> <tr style="background-color:#660099;"> <td class='aqiwtxt' nowrap="true">201-300</td> <td class='aqiwtxt'>Very Unhealthy</td> <td class='aqiwtxt'>Health warnings of emergency conditions. The entire population is more likely to be affected.</td> <td class='aqiwtxt'>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td> </tr> <tr style="background-color:#7e0023;"> <td class='aqiwtxt' nowrap="true">300+</td> <td class='aqiwtxt'>Hazardous</td> <td class='aqiwtxt'>Health alert: everyone may experience more serious health effects</td> <td class='aqiwtxt'>Everyone should avoid all outdoor exertion</td> </tr> </table></div><br>To know more about Air Quality and Pollution, check the <a href='http://en.wikipedia.org/wiki/Air_quality'>wikipedia Air Quality topic</a> or the <a href='http://www.airnow.gov/index.cfm?action=aqibasics.aqi'>airnow guide to Air Quality and Your Health</a>.<br><br>For very useful health advices of Beijing Doctor Richard Saint Cyr MD, check  <a href='http://www.myhealthbeijing.com/'>www.myhealthbeijing.com</a> blog.<br><br></center></div></div></div> <center> <br> <!-- responsive ad --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0281575029452656" data-ad-slot="2455076269" data-ad-format="auto"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> <style type='text/css'> .usage-notice { line-height:1.5; max-width:95%; width:1000px; margin-top:10px; padding:5px; font-size: 15px; background-color:#ffffff; text-shadow: 1px 1px 1px white; -webkit-box-shadow: 1px 1px 8px -3px rgba(0,0,0,0.3); } </style> <div class="textshadowwhite usage-notice" style=''> <b>Usage Notice</b>:  All the Air Quality data are unvalidated at the time of publication, and due to quality assurance these data may be amended, without notice, at any time. The World Air Quality Index project has exercised all reasonable skill and care in compiling the contents of this information and under no circumstances will the World Air Quality Index project team or its agents be liable in contract, tort or otherwise for any loss, injury or damage arising directly or indirectly from the supply of this data.</div> <br> <br> <br> </center> <style type="text/css"> @media print { #fixed-menubar,#footer-overlay { display: none} } .footer {  background: #138fcc;  background-attachment: fixed; background-image: url("https://aqicn.org/images-static/bluesky-banner-panoramic-dark.jpg"); background-position: top center,bottom center; background-size: auto 100% ; position: relative; text-align: center; font-weight:normal; margin:0 auto; color:white; width:100%;  font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif; } #fixed-menubar { font-family:"Noto Serif",Cambria,"Palatino Linotype","Book Antiqua","URW Palladio L",serif; } #fixed-footer-marker { height:1px; bottom:0; position:fixed;  } #footer-menu { padding-top: 5px; } #fixed-footer { box-shadow: 0 -1px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0 1px -1px rgba(0,0,0,0.6); -webkit-box-shadow: 0 1px -1px rgba(0,0,0,0.6); } #footer-overlay { box-shadow: 0 1px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.6); -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.6); background:#0086c8;  } .floating-footer-overlay {   bottom:0px;  padding:0px; margin:0px;  z-index:1000;  position:fixed;  display:none;  } .footer-logo { box-shadow: 0 1px 3px rgba(0,0,0,0.6); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6); } .footerattributions {  margin-top: 20px; width:95%; max-width: 1100px; font-size:15px; } .footercolumnout { width:95%;max-width: 1100px; font-size:15px;} .footercolumn { float:left; padding:0px; margin:0px;border:0;text-align: left;padding:0 10px;} .footercolumn1 { width:37%;} .footercolumn2 { width:38%; border-left:1px dashed white; } .footercolumn3 { width:15%; border-left:1px dashed white; } .madeinbjlogo { padding-top: 20px;} @media only screen and (max-width: 920px) { .footercolumn2 { display:none; } } @media only screen and (max-width: 920px) { .footercolumn1 { width:66%; } .footercolumn3 { width:20%; } } @media only screen and (max-width: 800px) { .footercolumn { text-align: center;} .footercolumn1 { width:95%; } .footercolumn3 { width:95%;border:0; padding:10px; text-align: center;float:right;margin:10px; } .madeinbjlogo { padding-top: 0;} } @media only screen and (max-width: 800px) { } .footercolumn2 li { margin-bottom: 8px; } .footer li a { background:transparent; -webkit-transition:background-color .25s; -moz-transition:background-color .25s; -0-transition:background-color .25s; transition:background-color .25s; margin-left:-8px; -webkit-border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; border-radius:4px; padding:2px 0 2px 8px; text-decoration:none; margin-right:8px; text-shadow:#000 1px 1px 1px; font-weight:normal!important; } .footer li a:hover { background:#62a6c8 } .footer h3 { font-variant: small-caps; font-size:150%; padding:0px; margin:0px; text-shadow:#2d3033 0 1px 0; font-weight:normal!important; margin-right:8px; } .footer h3 a { font-weight:normal!important; -webkit-transition:background-color .25s; -moz-transition:background-color .25s; -0-transition:background-color .25s; transition:background-color .25s; -webkit-border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; border-radius:4px; display:block; .footer h3 a:hover { background:#62a6c8 } </style> <!-- The floating-footer-marker is used to detect screen height  --> <div id="fixed-footer-marker" class="locked"></div> <!-- Place holder for the floating footer -->     <div id="floating-footer" class="footer-overlay floating-footer-overlay footer"> </div> <div id="fixed-footer" class="footer" > <div id="footer-overlay" class="footer-overlay"></div> <br> <br> <center> <div id='fixed-footer-menu-buttons-with-text' style='max-width:80%;margin-bottom:20px;display:none;'> <a href='javascript:go2home();' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-home'></div>home</div></a> <a href='/here/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-geofencing'></div>Here</div></a> <a href='/map/world/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-globe'></div>map</div></a> <a href='/mask/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-dustmask'></div>mask</div></a> <a href='/faq/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-faq'></div>faq</div></a> <a href='/city/all/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-search'></div>search</div></a> <a href='/contact/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-talk'></div>contact</div></a> <a href='/links/' class='menubar-text'><div class='fixed-menubar-button'><div class='sprite-isprt-web-link'></div>links</div></a> </div> <div class='footercolumnout'> <div class='footercolumn1 footercolumn'> <h3>About This Project</h3> <br> <li><a href='/contact/'>Contact The World Air Quality Index Project Team</a></li> <li><a href='/media/'>Press And Media Kit</a></li> <br> <h3><a href='/research/'>air quality research</a></h3> <br> <li><a href='/faq/'>Air Quality Knowledge Base And Articles</a></li> <li><a href='/research/'>Air Quality Experimentation</a></li> <li><a href='/sensor/'>Air Quality Sensors Analysis</a></li> <br> <h3><a href='/faq/'>Frequently Asked Questions</a></h3> <br> <li><a href='/sources/'>Air Quality Data source</a></li> <li><a href='/faq/2015-03-15/air-quality-nowcast-a-beginners-guide/'>Air Quality Index Calculation</a></li> <li><a href='/forecast/'>Air Quality Forecasting</a></li> <li><a href='/products/'>Air Quality Products (masks, Monitors…)</a></li> <li><a href='/api/'>API (Application Programming Interface)</a></li> <li><a href='/data-platform/'>Historical Data Platform</a></li> </div> <div class='footercolumn2 footercolumn' > <h3>Credits</h3> <br> <li><a href='/sources/'>All the EPA in the world for their excellent work in maintaining, measuring and providing Air Quality information to the world citizens</a></li> <li><a href='http://www.maxmind.com' target=_>This product includes GeoLite2 data created by MaxMind, available from maxmind.com.</a> <li><a href='http://geonames.org' target=_>This product includes GeoNames city information, available from geonames.org.</a> <li><a href="http://openweathermap.org/" target="__s">Open Weather Map, combined with qweather&trade; improvement algorithm</a> <li><a href='http://wxqa.com' target="__s">Citizen Weather Observer Program</a> via <a href='https://cwop.waqi.info' target="__s">cwop.waqi.info</a> <li><a href="http://atmosphere.copernicus.eu/" target="__s">Contains modified Copernicus Atmosphere Monitoring Service Information</a> <li><a href="https://www.flaticon.com/" target="__s" title="Flaticon">Some of the icons made by Freepik from www.flaticon.com</a> <li><a href="https://locationiq.com/" target="__s" title="location IQ">Reverse geocoding by locationiq.com</a> <li><a href="https://www.openstreetmap.org/copyright" target="__s" title="Open Street Map">Base map and data from OpenStreetMap.</a> </div> <div class='footercolumn3 footercolumn' > <center> &copy; 2008-2023 <br> <a href='https://waqi.info'>The World Air Quality Index Project</a> <br> <br> <img src='https://waqi.info/icons/logo.nearest.png?_=1712683884' class='footer-logo' alt='the World Air Quality Index project logo' border=0 height=100> &nbsp; &nbsp; <img class='async-img' data-src='https://aqicn.org/images/MadeInBJ.png?_=1712683884' class='madeinbjlogo' alt='made in 北京' border=0> <br> <br> </center> </div> </div> </center> <div style='clear:both'></div> <div style='clear:both;'></div> <center><div id='xatzcaqd'> </center> <br> <div id='mailing-list-footer'> <style type="text/css">#mailing-list-footer .mailing-list-subscription{ text-shadow:#000 1px 1px 1px; font-size:15px; color:white; }</style> <script>var i18nTexts=(i18nTexts||[]);i18nTexts.push([])</script><script src='/webapp/dist/mailing-dyn.740fe2cfc24722505254.js?_=1706407958' type='text/javascript'></script> </div> <center style='clear:both;'> <br><small>This page has been generated on Wednesday, Apr 10th 2024, 01:31 am CST from jp2n</small><br> <small><span id='gentime'></span></small> <br> <br> </center> <br> <br> </div> <script type="text/javascript"> var CFooter = function() { var _isFloating =  true; this.isFloating = function() { return _isFloating; }; this.checkPostion =  function() { var el; var clientHeight = document.body.clientHeight; var floatingFooterTop = 0; el = document.getElementById("floating-footer"); do { floatingFooterTop += el.offsetTop ? el.offsetTop : 0; } while (el = el.offsetParent); var fixedFooterTop = 0; el = document.getElementById("footer-overlay"); do { fixedFooterTop += el.offsetTop ? el.offsetTop : 0; } while (el = el.offsetParent); var scrollTop = 0; el = document.body; do { scrollTop += el.scrollTop  ? el.scrollTop  : 0; } while (el = el.parentNode); var screenHeight = 0; el = document.getElementById("fixed-footer-marker"); do { screenHeight += el.offsetTop ? el.offsetTop : 0; } while (el = el.offsetParent); if (screenHeight+scrollTop-$("#floating-footer").height() >= fixedFooterTop+40){ $("#fixed-menubar").hide(); _isFloating = false; } else { $("#fixed-menubar").show(); _isFloating = true; } }; var s = $("#fixed-menubar").html(); $("#footer-overlay").html(s).show(); $(window).bind('scroll', this.checkPostion); this.checkPostion(); return this; }; var footer = null; function initFooter()  {  if (!isMobileUA)  { footer = new CFooter();  } }; </script> <style> .onoffswitch { position: relative; width: 70px; -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none; } .onoffswitch-checkbox { display: none; } .onoffswitch-label { display: block; overflow: hidden; cursor: pointer; border: 2px solid #004E74; border-radius: 20px; } .onoffswitch-inner { display: block; width: 200%; margin-left: -100%; transition: margin 0.3s ease-in 0s; } .onoffswitch-inner:before, .onoffswitch-inner:after { display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px; font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold; box-sizing: border-box; } .onoffswitch-inner:before { content: "°C"; padding-left: 10px; background-color: #04ADFF; color: #FFFFFF; } .onoffswitch-inner:after { content: "°F"; padding-right: 10px; background-color: #04ADFF; color: #FFFFFF; text-align: right; } .onoffswitch-switch { display: block; width: 28px; margin: 1px; background: #FFFFFF; position: absolute; top: 0; bottom: 0; right: 36px; border: 2px solid #004E74; border-radius: 20px; transition: all 0.3s ease-in 0s;  } .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner { margin-left: 0; } .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch { right: 0px;  } </style> <style> #settingsdiv-copy { margin:20px; } #settingsdiv-outer { padding-bottom:10px; position:fixed; z-index: 100003; } #settingsdiv { xdisplay: none; xwidth:200px; xheight:120px; overflow-y: scroll; max-height: 300px; font-size:15px;  padding:2px 10px; background-color:#0086c8; -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5); border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; border:3px solid #fff; color:#fff; } #settingsdiv h2 { font-size:20px; } #settings-lang { padding: 5px; } #settings-lang a:hover { text-decoration: none; } #settings-lang .item:hover { background-color: #eee; color: black; } #settings-lang .item:hover .name { color: black; } #settings-lang .item { max-width: 450px; padding: 2px; } #settings-lang .name span { font-size: 16px; } #settings-lang .name { font-size:18px; color: white; font-variant: small-caps; } #settings-lang .flag { vertical-align: text-bottom; display:inline-block; } #settings-lang select { font-size: 18px; } </style> <div id='settingsdiv-outer'> <div id='settingsdiv' > <div  onclick='settingsMenu.close()' style='cursor:pointer;border-bottom:1px solid #ccccf8;padding-top:12px;'> <svg height="24px" viewBox="0 0 512 512" width="24px" style='float:right;fill:white;'> <path d="M74.966,437.013c-99.97-99.97-99.97-262.065,0-362.037c100.002-99.97,262.066-99.97,362.067,0  c99.971,99.971,99.971,262.067,0,362.037C337.032,536.998,174.968,536.998,74.966,437.013z M391.782,120.227  c-75.001-74.985-196.564-74.985-271.534,0c-75.001,74.985-75.001,196.55,0,271.535c74.97,74.986,196.533,74.986,271.534,0  C466.754,316.775,466.754,195.212,391.782,120.227z M188.124,369.137l-45.251-45.266l67.876-67.877l-67.876-67.876l45.251-45.267  L256,210.743l67.877-67.892l45.25,45.267l-67.876,67.876l67.876,67.877l-45.25,45.266L256,301.245L188.124,369.137z"/> </svg> <h2>Settings</h2> </div> <br> <center> <div id='settings-lang'> Language Settings:    <br> <div class='sprite-isprt-web-gb flag'></div> <div class='sprite-isprt-web-cn flag'></div> <div class='sprite-isprt-web-jp flag'></div> <div class='sprite-isprt-web-kr flag'></div> <div class='sprite-isprt-web-pl flag'></div> <br> <select onchange='location.href = this.value'> <option value='https://aqicn.org/here/' selected>English</option><option value='https://aqicn.org/here/cn/' >简体中文 - Chinese</option><option value='https://aqicn.org/here/jp/' >日本 - Japanese</option><option value='https://aqicn.org/here/es/' >español - Spanish</option><option value='https://aqicn.org/here/kr/' >한국의 - Korean</option><option value='https://aqicn.org/here/ru/' >русский - Russian</option><option value='https://aqicn.org/here/hk/' >繁體中文 - Traditional Chinese</option><option value='https://aqicn.org/here/fr/' >Francais - French</option><option value='https://aqicn.org/here/pl/' >Polski - Polish</option><option value='https://aqicn.org/here/de/' >Deutsch - German</option><option value='https://aqicn.org/here/pt/' >Português - Portuguese</option><option value='https://aqicn.org/here/vn/' >Tiếng Việt - Vietnamese</option><option value='https://aqicn.org/here/it/' >Italiano - Italian</option><option value='https://aqicn.org/here/id/' >bahasa Indonesia - Indonesian</option><option value='https://aqicn.org/here/nl/' >Nederlands - Dutch</option><option value='https://aqicn.org/here/fa/' >فارسی - Persian</option><option value='https://aqicn.org/here/th/' >ภาษาไทย - Thai</option><option value='https://aqicn.org/here/hu/' >Magyar - Hungarian</option><option value='https://aqicn.org/here/el/' >Ελληνικά - Greek</option><option value='https://aqicn.org/here/ro/' >Română - Romanian</option><option value='https://aqicn.org/here/bg/' >български - Bulgarian</option><option value='https://aqicn.org/here/ur/' >اردو - Urdu</option><option value='https://aqicn.org/here/hi/' >हिंदी - Hindi</option><option value='https://aqicn.org/here/ar/' >العربية - Arabic</option><option value='https://aqicn.org/here/sr/' >Српски - Serbian</option><option value='https://aqicn.org/here/bn/' >বাংলা - Bangla</option><option value='https://aqicn.org/here/bs/' >босански - Bosnian</option><option value='https://aqicn.org/here/hr/' >hrvatski - Croatian</option></select> </div> <br> <table> <tr><td> <center> <i>Temperature unit:</i><br> <span style='font-size:18px'> <span style='display:;' id='settings-temp-label-on'>Celcius</span> <span style='display:none;' id='settings-temp-label-off'>Fahrenheit</span> </span> </center> </td><td> <div class="onoffswitch" onclick='settingsMenu.click("temp")'> <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="settings-temp" checked > <label class="onoffswitch-label" for="myonoffswitch"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label> </div> </table> </center> <br> </div> <div style='display:none;height:0px;' id='settingsdiv-arrow'><div style='width: 0; height: 0; border: 7px solid transparent;top:0px;border-top: 7px solid #fff;position:relative;;margin-left:100px;'></div></div> </div> <script> function CSettingsMenu() { var self=this; var isInit = false; var timeout = null; var isPopup = false; this.show = function() { log("show!"); if (isPopup) { this.close(); return; } isPopup = true; $("#settingsdiv-arrow").hide(); $("#settingsdiv").show(); var pos = $("#footer-settings-img").offset(); $("#settingsdiv-outer").css({ left: "0px", width: "100%", bottom: "30px" }); $("#settingsdiv").css({ width: "100%", textAlign: "center", boxSizing: "border-box" }); }; this.close = function() { log("close!"); $("#settingsdiv").hide(); isPopup = false; }; this.onmouseover = function() { if (isPopup) return; if (!footer || !footer.isFloating()) return; if (getWindowWidth()<800) return; if (!isInit) { $('#settingsdiv-outer').show() .mouseleave(function(){ self.onmouseout(); }) .mouseenter(function(){ self.onmouseover(); }); display("temp"); isInit = true; } if (timeout) clearTimeout(timeout); timeout = null; var pos = $("#footer-settings-img").offset(); var px = (pos.left+6-100); $("#settingsdiv-outer").css({ left: px + "px", bottom: (30) + "px" }); $("#settingsdiv").show(); $("#settingsdiv-arrow").delay(150).show(); var tb = document.getElementById("settingsdiv").getBoundingClientRect(), w =getWindowWidth(); var ml = Math.min((w-tb.right-2),0); $("#settingsdiv-outer").css({left:(px+ml)+"px"}); }; this.onmouseout = function() { if (isPopup) return; isShown = false; if (timeout) clearTimeout(timeout); timeout = setTimeout(function(){ $("#settingsdiv").slideUp(200); $("#settingsdiv-arrow").hide(); },150); }; this.click = function(item) { var status = store.get('aqicn-settings-'+item); store.set('aqicn-settings-'+item,status==1?2:1); display(item); if (item=="temp") convertTemperature(); }; this.val = function(item)  { var status = store.get('aqicn-settings-'+item); return status!=1; }; var display = function(item)  { var status = store.get('aqicn-settings-'+item); if (status==1) { $("#settings-"+item+"-label-off").show(); $("#settings-"+item+"-label-on").hide(); } else { $("#settings-"+item+"-label-on").show(); $("#settings-"+item+"-label-off").hide(); } var o = document.getElementById("settings-"+item); if (o) o.checked = status!=1; }; document.getElementById('settingsdiv-outer').addEventListener('touchmove', function(e) { e.preventDefault(); }, false); return this; } var settingsMenu = new CSettingsMenu(); </script> <script type="text/javascript">  fitLine(".link",.9);  </script> <script  src='https://aqicn.org/air-cache/jquery-3.4.1.min.js?_=20191127.152416' type='text/javascript'></script> <script type="text/javascript"> function initTime() { if (isMobileUA) return; function setTimeText() { var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];  var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]; var newDate = new Date(); newDate.setDate(newDate.getDate()); var od = document.getElementById("ClockTime"); if (od) od.innerHTML =  dayNames[newDate.getDay()] + " " +  monthNames[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear(); var minutes = new Date().getMinutes(); var hours = new Date().getHours(); var time = ( hours < 10 ? "0" : "" ) + hours; time += ":"+( minutes < 10 ? "0" : "" ) + minutes; var ot = document.getElementById("ClockTime"); if (ot) ot.innerHTML = time; } setInterval( function() { setTimeText() }, 1000*60*15 ); setTimeText(); }; aqi18n.register('aqi-implication-0-50',"Air quality is considered satisfactory, and air pollution poses little or no risk");aqi18n.register('aqi-level-0-50',"Good");aqi18n.register('aqi-implication-50-100',"Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.");aqi18n.register('aqi-level-50-100',"Moderate");aqi18n.register('aqi-implication-100-150',"Members of sensitive groups may experience health effects. The general public is not likely to be affected.");aqi18n.register('aqi-level-100-150',"Unhealthy for sensitive groups");aqi18n.register('aqi-level-100-150-html',"<div style='font-size:66%'>Unhealthy for sensitive groups<\/div>");aqi18n.register('aqi-implication-150-200',"Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects");aqi18n.register('aqi-level-150-200',"Unhealthy");aqi18n.register('aqi-implication-200-300',"Health warnings of emergency conditions. The entire population is more likely to be affected.");aqi18n.register('aqi-level-200-300',"Very Unhealthy");aqi18n.register('aqi-level-200-300-html',"<div style='line-height:1.1'><span style='font-size:16px;'>Very<\/span><br>Unhealthy<\/div>");aqi18n.register('aqi-implication-300-500',"Health alert: everyone may experience more serious health effects");aqi18n.register('aqi-level-300-500',"Hazardous");aqi18n.register('updated',"Updated"); </script> <script type="text/javascript"> ["initFooter","preInitPage","initTime"].forEach(function(f){ if (window[f]) { try { window[f](); } catch (e) { loge("error in "+f,e); }}  }); </script> <script  src='/jscripts/moment/bundle.min.js?_=20200103.150752&type=script'></script> <script  src='https://aqicn.org/air-cache/tingle/0.15.1/tingle.min.js?_=20191109.130307' type='text/javascript'></script> <script type="text/javascript"> document.addEventListener("DOMContentLoaded", function() {  ["Page","HeadSearch","Search","Notify","Geolocate","AqiForecast","Download","Sharing","Page2"].forEach(function(f){ f = "init"+f; if (window[f]) {  try { window[f](); } catch (e) { loge ("error in "+f,e,e.stack);};  } }); if (typeof ntfOnInit != "undefined") ntfOnInit(); }); </script> <style type="text/css"> .uv-icon.uv-top-right { position:absolute!important;top:38px!important;z-index: 1!important; } .uv-icon.uv-bottom-right { bottom:42px!important;} ._hj-f5b2a1eb-9b07_widget { z-index: 0!important; } #uvTab { z-index: 100!important; } .uv-icon { z-index: 100; } </style> <script type="text/javascript"> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-28507883-1', 'auto'); ga('send', 'pageview'); try { var images = document.querySelectorAll('.async-img'); var config = { rootMargin: '50px 0px', threshold: 0.01}; function preloadImage(img) { img.src = img.dataset.src;         } function onIntersection(entries) { entries.forEach(function(entry) { if (entry.intersectionRatio > 0) { observer.unobserve(entry.target); preloadImage(entry.target); } }) } var observer = new IntersectionObserver(onIntersection, config); images.forEach(function(image){observer.observe(image)}); } catch (e) {}  </script> <!-- Generated on jp2n on 2024-04-10T02:31:24+09:00 --> </body> </html>

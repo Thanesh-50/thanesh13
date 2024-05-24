@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Water Management Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Unique Styles */
+        header {
+  background-image: url('https://i.pinimg.com/564x/bd/f7/f8/bdf7f87844a317f7eff8e14fd1b79bae.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+        .feature:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); /* Enhanced box shadow */
+        }
+
+        .footer {
+            background-color: #1B4F72; /* Dark Sapphire */
+            color: #fff;
+            padding: 30px 0; /* Increased padding */
+            text-align: center;
+        }
+
+        
+        nav {
+      background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient background */
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative; /* Position relative for hover effect */
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+      display: block;
+      padding: 10px 20px;
+      border-radius: 20px; /* Rounded corners for nav links */
+    }
+    nav ul li a:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color on hover */
+    }
+        main {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #4CAF50;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .feature {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px; /* Slightly increased border radius */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section {
+            display: none;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .section h3 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            color: #555;
+            transition: background-color 0.3s ease;
+        }
+
+        input:hover,
+        select:hover {
+            background-color: #f0f0f0;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #4CAF50
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+        }
+
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Waste Management Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="plastic_waste.html">Plastic Waste Reduction</a></li>
+                <li><a href="renewable_energy.html">Renewable Energy Integration</a></li>
+                <li><a href="urban_air_quality.html">Urban Air Quality Improvement</a></li>
+                <li><a href="water_scarcity.html">Water Scarcity Management</a></li>
+                <li><a href="climate_resilience.html">Climate Resilience and Adaptation</a></li>
+                <li><a href="MOON.html">Waste Management  </a></li>
+                <li><a href="green_building.html">Green Building Design and Construction</a></li>
+                <li><a href="biodiversity_conservation.html">Biodiversity Conservation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Home Section with Features -->
+        <section id="home">
+
+            <div class="features">
+                <!-- Feature 1: Pickup Scheduling -->
+                <div class="feature" onclick="showSection('pickup-form')">
+                    <span class="feature-icon">&#x1F4CB;</span>
+                    <h3 class="feature-title">Pickup Scheduling</h3>
+                    <p class="feature-description">Effortlessly schedule waste pickups at your convenience.</p>
+                </div>
+
+                <!-- Feature 2: Segregation Guidelines -->
+                <div class="feature" onclick="showSection('segregation-guidelines')">
+                    <span class="feature-icon">&#x1F6AA;</span>
+                    <h3 class="feature-title">Segregation Guidelines</h3>
+                    <p class="feature-description">Learn the best practices for waste segregation to promote
+                        recycling.</p>
+                </div>
+
+                <!-- Feature 3: Recycling Centers -->
+                <div class="feature" onclick="showSection('recycling-centers')">
+                    <span class="feature-icon">&#x267B;</span>
+                    <h3 class="feature-title">Recycling Centers</h3>
+                    <p class="feature-description">Locate nearby recycling centers for responsible waste
+                        disposal.</p>
+                </div>
+
+                <!-- Feature 4: Payment -->
+                <div class="feature" onclick="showSection('payment-form')">
+                    <span class="feature-icon">&#x1F4B3;</span>
+                    <h3 class="feature-title">Payment</h3>
+                    <p class="feature-description">Securely complete your order by providing payment
+                        information.</p>
+                </div>
+
+                <!-- Feature 5: Analytics -->
+                <div class="feature" onclick="showSection('analytics-dashboard')">
+                    <span class="feature-icon">&#x1F4CA;</span>
+                    <h3 class="feature-title">Analytics</h3>
+                    <p class="feature-description">Track and analyze key metrics for efficient waste
+                        management.</p>
+                </div>
+
+                <!-- Feature 9: Real-Time Monitoring (Placeholder) -->
+                <div class="feature" onclick="showSection('real-time-monitoring')">
+                    <span class="feature-icon">&#x1F514;</span>
+                    <h3 class="feature-title">Real-Time Monitoring</h3>
+                    <p class="feature-description">(Placeholder) Monitor waste management activities in
+                        real-time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pickup Form Section -->
+        <section id="pickup-form" class="section form-container">
+            <h3>Schedule a Pickup</h3>
+            <form>
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="pickup-time">Pickup Time:</label>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+
+                <label for="waste-type">Type of Waste:</label>
+                <select id="waste-type" name="waste-type">
+                    <option value="organic">Organic</option>
+                    <option value="recyclable">Recyclable</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="pickup-address">Pickup Address:</label>
+                <input type="text" id="pickup-address" name="pickup-address" required>
+
+                <input type="submit" value="Schedule Pickup">
+            </form>
+        </section>
+
+        <!-- Segregation Guidelines Section -->
+        <section id="segregation-guidelines" class="section">
+            <h3>Waste Segregation Guidelines</h3>
+            <p>Proper waste segregation is important to ensure that waste is disposed of in an environmentally
+                responsible manner. Here are some guidelines to follow:</p>
+            <ul>
+                <li>Separate organic waste (e.g. food scraps, yard waste) from recyclable waste (e.g. paper,
+                    plastic, glass).</li>
+                <li>Do not mix hazardous waste (e.g. batteries, electronics) with regular waste.</li>
+                <li>Check with your local waste management facility to see if they accept specific types of
+                    waste.</li>
+                <li>Follow any additional guidelines provided by your waste management provider.</li>
+            </ul>
+        </section>
+
+        <!-- Recycling Centers Section -->
+        <section id="recycling-centers" class="section">
+            <h3>Recycling Centers Near You</h3>
+            <p>Here are some recycling centers near you:</p>
+            <ul>
+                <li>Recycling Center 1 - Address 1</li>
+                <li>Recycling Center 2 - Address 2</li>
+                <li>Recycling Center 3 - Address 3</li>
+            </ul>
+        </section>
+
+        <!-- Payment Form Section -->
+        <section id="payment-form" class="section form-container">
+            <h3>Payment Information</h3>
+            <form>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiration-date">Expiration Date:</label>
+                <input type="month" id="expiration-date" name="expiration-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <input type="submit" value="Complete Payment">
+            </form>
+        </section>
+
+        <!-- Analytics Dashboard Section -->
+        <section id="analytics-dashboard" class="section">
+            <h3>Analytics Dashboard</h3>
+            <p>Here are some key metrics for your waste management:</p>
+            <ul>
+                <li>Total Waste Collected: 1000 tons</li>
+                <li>Waste Diversion Rate: 50%</li>
+                <li>CO2 Emissions Saved: 500 tons</li>
+            </ul>
+
+            <!-- Pie Chart -->
+            <div class="chart-container">
+                <canvas id="pie-chart"></canvas>
+            </div>
+
+            <!-- Bar Chart -->
+            <div class="chart-container">
+                <canvas id="bar-chart"></canvas>
+            </div>
+        </section>
+
+
+        <!-- Login Form Section -->
+        <section id="login-form" class="section form-container">
+            <h3>Login</h3>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Login">
+            </form>
+        </section>
+
+
+
+        <!-- Real-Time Monitoring Section (Placeholder) -->
+        <section id="real-time-monitoring" class="section">
+            <h3>Real-Time Monitoring (Placeholder)</h3>
+            <p>This section is a placeholder for real-time monitoring of waste management activities. Actual
+                monitoring features will be implemented in the future.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        &copy; MR.COMRADE AND TEAM . All rights reserved.
+    </footer>
+
+    <script>
+        // Function to show/hide sections based on the selected feature
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // Dummy data for the pie chart
+        const pieChartData = {
+            labels: ['Organic Waste', 'Recyclable Waste', 'Other Waste'],
+            datasets: [{
+                data: [30, 50, 20],
+                backgroundColor: ['#4CAF50', '#2196F3', '#FFC107'],
+            }],
+        };
+
+        // Dummy data for the bar chart
+        const barChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+                label: 'Waste Collected (tons)',
+                data: [100, 120, 80, 150, 200],
+                backgroundColor: '#4CAF50',
+            }],
+        };
+
+        // Pie Chart
+        const pieChart = new Chart(document.getElementById('pie-chart').getContext('2d'), {
+            type: 'pie',
+            data: pieChartData,
+        });
+
+        // Bar Chart
+        const barChart = new Chart(document.getElementById('bar-chart').getContext('2d'), {
+            type: 'bar',
+            data: barChartData,
+        });
+    </script>
+</body>
+
+</html>

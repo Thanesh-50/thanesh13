@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Response Hub</title>
+  <style>
+   /* CSS styles */
+    header {
+      background-color: #2c3e50; /* Updated header background color */
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 36px;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for header */
+    }
+    nav {
+      background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient background */
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative; /* Position relative for hover effect */
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+      display: block;
+      padding: 10px 20px;
+      border-radius: 20px; /* Rounded corners for nav links */
+    }
+    nav ul li a:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color on hover */
+    }
+    
+section {
+  padding: 30px;
+  background-color: #ecf0f1; /* Updated section background color */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+section h2 {
+  color: #2980b9; /* Updated heading color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: grab;
+    display: ruby-textflex;
+    align-items: normal;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.feature h3 {
+  color: #e67e22; /* Updated feature heading color */
+  margin: 0;
+  margin-left: 10px;
+}
+
+.feature-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.emoji {
+  font-size: 36px;
+  margin-right: 20px;
+  padding: auto;
+}
+
+.alert {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚨 Emergency Response Hub</h1> <!-- Added emergency icon -->
+  </header>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="plastic_waste.html">Plastic Waste Reduction</a></li>
+      <li><a href="renewable_energy.html">Renewable Energy Integration</a></li>
+      <li><a href="urban_air_quality.html">Urban Air Quality Improvement</a></li>
+      <li><a href="water_scarcity.html">Water Scarcity Management</a></li>
+      <li><a href="climate_resilience.html">Climate Resilience and Adaptation</a></li>
+      <li><a href="MOON.html">Waste Management</a></li>
+      <li><a href="green_building.html">Green Building Design and Construction</a></li>
+      <li><a href="biodiversity_conservation.html">Biodiversity Conservation</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section>
+  
+    <div class="feature" onclick="toggleContent('feature1')">
+      <div class="emoji"></div>
+      <h3>⚠️ Assess the Situation</h3>
+      <div class="feature-content" id="feature1">
+        <p>Quickly assess the situation to determine the nature and severity of the emergency.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature2')">
+      <div class="emoji"></div>
+      <h3>📞 Call for Help</h3>
+      <div class="feature-content" id="feature2">
+        <p>Contact emergency services (911 or local emergency number) to request assistance.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature3')">
+      <div class="emoji"></div>
+      <h3>🚨Alert Others</h3>
+      <div class="feature-content" id="feature3">
+        <p>Notify nearby individuals of the emergency and instruct them to evacuate if necessary.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature4')">
+      <div class="emoji"></div>
+      <h3>🛠️ Use Safe Intervention Techniques</h3>
+      <div class="feature-content" id="feature4">
+        <p>Apply appropriate intervention techniques while prioritizing personal safety.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature5')">
+      <div class="emoji"></div>
+      <h3>👩‍⚕️Seek Professional Help</h3>
+      <div class="feature-content" id="feature5">
+        <div class="feature-text" id="hospitalMap">
+          <h3>Nearby Hospitals</h3>
+          <div id="map"></div>
+        </div>
+        <p>Seek assistance from trained professionals, such as medical personnel or firefighters.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature6')">
+      <div class="emoji"></div>
+      <h3>📝 Document Evidence</h3>
+      <div class="feature-content" id="feature6">
+        <p>Document the details of the emergency, including any injuries, damages, or relevant information.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature7')">
+      <div class="emoji"></div>
+      <h3>🤝 Provide Support</h3>
+      <div class="feature-content" id="feature7">
+        <p>Offer support and assistance to those affected by the emergency, both physically and emotionally.</p>
+      </div>
+    </div>
+    <div class="feature" onclick="toggleContent('feature8')">
+      <div class="emoji"></div>
+      <h3>🔄Follow Up</h3>
+      <div class="feature-content" id="feature8">
+        <p>Follow up with emergency services, affected individuals, and relevant authorities to ensure resolution and recovery.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 Sustainability Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simulate real-time emergency alert
+    setTimeout(function() {
+      document.getElementById('emergencyAlert').style.display = 'block';
+    }, 5000); // Show emergency alert after 5 seconds
+
+    function toggleContent(featureId) {
+      var content = document.getElementById(featureId);
+      content.style.display = (content.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Sustainability Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* CSS styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #444;
+    }
+    header {
+  background-image: url('https://i.pinimg.com/564x/bd/f7/f8/bdf7f87844a317f7eff8e14fd1b79bae.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 20px 0;
+  
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+nav {
+      background: url('https://i.pinimg.com/564x/bd/f7/f8/bdf7f87844a317f7eff8e14fd1b79bae.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire area */
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative; /* Position relative for hover effect */
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+      display: block;
+      padding: 10px 20px;
+      border-radius: 20px; /* Rounded corners for nav links */
+    }
+    nav ul li a:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color on hover */
+    }
+    section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    footer {
+      background-color: #3D5A80;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .cta-button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+    .feature {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .feature-icon {
+      font-size: 64px;
+      color: #3D5A80;
+      margin-right: 30px;
+      animation: pulse 1s infinite;
+    }
+    .feature-text {
+      font-size: 20px;
+      text-align: left;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="animate__animated animate__fadeInDown">Welcome to Sustainability Hub</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home </a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div class="container">
+      <h2 class="animate__animated animate__fadeInUp">Join Us in Building a Sustainable Future</h2>
+      <p class="animate__animated animate__fadeInUp">Explore our featured initiatives below:</p>
+      <div class="feature animate__animated animate__fadeIn">
+        <i class="fas fa-recycle feature-icon"></i>
+        <div class="feature-text">
+          <h3>Transforming Waste into Resources</h3>
+          <p>Discover how we're revolutionizing waste management to create a cleaner environment.</p>
+        </div>
+      </div>
+      <div class="feature animate__animated animate__fadeIn">
+        <i class="fas fa-leaf feature-icon"></i>
+        <div class="feature-text">
+          <h3>Empowering Green Communities</h3>
+          <p>Learn about our efforts to promote sustainable living and eco-friendly practices in communities.</p>
+        </div>
+      </div>
+      <div class="feature animate__animated animate__fadeIn">
+        <i class="fas fa-globe feature-icon"></i>
+        <div class="feature-text">
+          <h3>Global Impact for a Greener Planet</h3>
+          <p>Explore our initiatives aimed at combating climate change and preserving natural habitats worldwide.</p>
+        </div>
+      </div>
+      <a href="services.html" class="cta-button animate__animated animate__fadeInUp">Explore Our Services</a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2024 Sustainability Hub. All rights reserved.
+  </footer>
+</body>
+</html>
